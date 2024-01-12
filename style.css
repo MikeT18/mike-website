@@ -1,34 +1,49 @@
-body {
-    font-family: Arial, sans-serif;
+body, html {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
     background-color: #fff;
+    line-height: 1.6;
 }
 
 header {
-    background-color: grey;
-    padding: 10px;
-    text-align: right;
-    width: 100%;
-    box-sizing: border-box;
+    background-color: #d3d3d3;
+    color: black;
+    padding: 15px 0;
 }
 
-.name {
+.header-content {
+    width: 90%;
+    margin: 0 auto;
+    text-align: right;
+}
+
+h1 {
     margin: 0;
-    color: black;
     font-size: 24px;
 }
 
 main {
-    padding: 20px;
-    clear: both; /* Clears the floating image */
+    width: 90%;
+    margin: 20px auto;
+}
+
+.profile-section, .blog-link, .blog-content {
+    margin-bottom: 20px;
 }
 
 .profile-img {
-    display: block;
+    width: 150px;
     float: left;
     margin-right: 20px;
-    width: 150px; /* Adjust size as needed */
-    height: auto;
+    border-radius: 50%;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
 }
