@@ -8,9 +8,9 @@ body, html {
 }
 
 header {
-    background-color: #d3d3d3;
+    background-color: #000000;
     color: black;
-    padding: 15px 0;
+    padding: 12px 0;
 }
 
 .header-content {
