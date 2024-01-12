@@ -9,7 +9,7 @@ body, html {
 
 header {
     background-color: #000000;
-    color: black;
+    color: white; /* Text color in the header is white */
     padding: 12px 0;
 }
 
@@ -22,6 +22,7 @@ header {
 h1 {
     margin: 0;
     font-size: 24px;
+    color: white; /* Header text is white */
 }
 
 main {
