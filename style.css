@@ -6,24 +6,23 @@ body {
     background-color: #fff;
 }
 
-header, footer {
-    text-align: center;
+header {
+    background-color: grey;
+    padding: 10px;
+    text-align: right;
+}
+
+.name {
+    margin: 0;
+    color: black;
+}
+
+main {
     padding: 20px;
 }
 
 .profile-img {
     display: block;
-    margin: 0 auto;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-.blog-posts {
-    margin: 20px;
-}
-
-footer {
-    border-top: 1px solid #ddd;
-    margin-top: 20px;
+    float: left;
+    margin-right: 20px;
 }
