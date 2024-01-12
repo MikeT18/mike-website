@@ -9,20 +9,33 @@ body, html {
 
 header {
     background-color: #000000;
-    color: white; /* Text color in the header is white */
     padding: 12px 0;
 }
 
 .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 90%;
     margin: 0 auto;
-    text-align: right;
+}
+
+.name-left {
+    margin: 0;
+    color: white;
+}
+
+.home-link {
+    color: white;
+    text-decoration: none;
+}
+
+.home-link:hover {
+    text-decoration: underline;
 }
 
 h1 {
-    margin: 0;
     font-size: 24px;
-    color: white; /* Header text is white */
 }
 
 main {
@@ -30,15 +43,28 @@ main {
     margin: 20px auto;
 }
 
-.profile-section, .blog-link, .blog-content {
+.profile-section {
     margin-bottom: 20px;
 }
 
 .profile-img {
     width: 150px;
+    height: 150px;
     float: left;
     margin-right: 20px;
-    border-radius: 50%;
+    border-radius: 0;
+}
+
+.intro-text {
+    margin-top: 20px;
+}
+
+.intro-text p {
+    font-size: 1.2em;
+}
+
+.blog-link {
+    margin-bottom: 20px;
 }
 
 a {
