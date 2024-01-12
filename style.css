@@ -10,19 +10,25 @@ header {
     background-color: grey;
     padding: 10px;
     text-align: right;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .name {
     margin: 0;
     color: black;
+    font-size: 24px;
 }
 
 main {
     padding: 20px;
+    clear: both; /* Clears the floating image */
 }
 
 .profile-img {
     display: block;
     float: left;
     margin-right: 20px;
+    width: 150px; /* Adjust size as needed */
+    height: auto;
 }
