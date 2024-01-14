@@ -116,3 +116,6 @@ footer {
     justify-content: flex-end; /* Aligns links to the right */
     padding-right: 15px; /* Adds padding to the right */
 }
+.nav-links a:last-child {
+    margin-right: 20px; /* Add margin to the last link */
+}
