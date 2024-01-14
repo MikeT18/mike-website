@@ -76,8 +76,11 @@ a:hover {
     /* other styles... */
 }
 
-.nav-links {
+.header-content {
     display: flex;
-    gap: 15px; /* Adjust the space between the links as needed */
-    /* other styles... */
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 30px); /* Adjust width to account for padding */
+    margin: 0 auto;
+    padding: 0 15px; /* 15px padding on both sides */
 }
