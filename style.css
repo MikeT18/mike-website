@@ -48,8 +48,8 @@ main {
 }
 
 .profile-img {
-    width: 326px; /* Half the original width */
-    height: 431px; /* Half the original height, rounded */
+    width: 163px; /* Half the original width */
+    height: 215.5px; /* Half the original height, rounded */
     float: left;
     margin-right: 20px;
     border-radius: 0; /* Optional: remove if you want square corners */
