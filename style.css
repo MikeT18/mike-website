@@ -12,14 +12,6 @@ header {
     padding: 12px 0;
 }
 
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    margin: 0 auto;
-}
-
 .name-left {
     margin: 0;
     color: white;
@@ -76,4 +68,16 @@ a:hover {
 }
 .post-date {
     color: grey;
+}
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* other styles... */
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px; /* Adjust the space between the links as needed */
+    /* other styles... */
 }
