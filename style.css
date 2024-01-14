@@ -84,3 +84,20 @@ a:hover {
     margin: 0 auto;
     padding: 0 15px; /* 15px padding on both sides */
 }
+footer {
+    background-color: #000000; /* Black background for the footer */
+    color: white; /* White text color */
+    text-align: center;
+    padding: 10px 0; /* Adjust padding as needed */
+    font-size: 12px; /* Font size set to 12 */
+}
+
+.footer-content a {
+    color: white; /* White text color for links */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
