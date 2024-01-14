@@ -101,3 +101,9 @@ footer {
 .footer-content a:hover {
     text-decoration: underline;
 }
+
+.nav-links {
+    display: flex;
+    gap: 20px; /* Increase the gap as needed */
+    /* other styles... */
+}
