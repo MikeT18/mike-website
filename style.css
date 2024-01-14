@@ -20,6 +20,15 @@ header {
 .home-link {
     color: white;
     text-decoration: none;
+    margin-right: 10px; /* Space between links */
+
+}
+
+.about-link {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px; /* Space between links */
+
 }
 
 .home-link:hover {
@@ -104,6 +113,6 @@ footer {
 
 .nav-links {
     display: flex;
-    gap: 20px; /* Increase the gap as needed */
-    /* other styles... */
+    justify-content: flex-end; /* Aligns links to the right */
+    padding-right: 15px; /* Adds padding to the right */
 }
