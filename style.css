@@ -82,7 +82,7 @@ a:hover {
     align-items: center;
     width: calc(100% - 30px); /* Adjust width to account for padding */
     margin: 0 auto;
-    padding: 0 15px; /* 15px padding on both sides */
+    padding: 0 30px; /* 30px padding on both sides */
 }
 footer {
     background-color: #000000; /* Black background for the footer */
