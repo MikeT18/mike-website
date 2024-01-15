@@ -121,6 +121,6 @@ footer {
 }
 
 .original-size-image {
-    width: auto;
-    height: auto;
+    max-width: 80%; /* ensures the image is never wider than its container */
+    height: auto; /* maintains the aspect ratio */
 }
