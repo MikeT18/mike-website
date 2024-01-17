@@ -121,7 +121,7 @@ footer {
 }
 
 .original-size-image {
-    max-width: 80%; /* ensures the image is never wider than its container */
+    max-width: 50%; /* ensures the image is never wider than its container */
     height: auto; /* maintains the aspect ratio */
     display: block; /* makes the image a block-level element */
     margin: 0 auto; /* centers the image horizontally */
