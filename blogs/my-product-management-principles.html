@@ -45,7 +45,7 @@
    <div id="footer-placeholder"></div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('footer.html')
+    fetch('../footer.html')
         .then(response => response.text())
         .then(text => document.getElementById('footer-placeholder').innerHTML = text);
 });
