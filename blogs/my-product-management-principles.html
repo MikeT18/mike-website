@@ -42,12 +42,12 @@
         </div>
     </main>
 </body>
-     <footer>
-    <div class="footer-content">
-        <p>Website made by Mike Tattersall</p>
-        <a href="https://twitter.com/tmikes18" target="_blank">@tmikes18 on Twitter</a> | 
-        <a href="https://www.linkedin.com/in/mike-tattersall-03b41a93/" target="_blank">My LinkedIn Profile</a> | 
-        <a href="mailto:michaelrwtattersall@gmail.com">Email Me</a>
-    </div>
-</footer>
+   <div id="footer-placeholder"></div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(text => document.getElementById('footer-placeholder').innerHTML = text);
+});
+</script>
 </html>
