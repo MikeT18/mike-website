@@ -39,6 +39,10 @@ h1 {
     font-size: 24px;
 }
 
+h2 {
+  margin-bottom: 20px; /* Reduced gap */
+}
+
 main {
     width: 80%;
     margin: 20px auto;
