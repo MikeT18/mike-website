@@ -5,11 +5,14 @@ body, html {
     color: #333;
     background-color: #fff;
     line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 header {
     background-color: #000000;
     padding: 12px 0;
+    width: 100%; /* Ensure header spans full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .name-left {
@@ -53,12 +56,14 @@ h2 {
 main {
     width: 80%;
     margin: 20px auto;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .profile-section {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .profile-img {
@@ -91,27 +96,24 @@ a:hover {
 .post-date {
     color: grey;
 }
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* other styles... */
-}
 
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: calc(100% - 30px); /* Adjust width to account for padding */
-    margin: 0 auto;
+    width: 100%;
     padding: 0 30px; /* 30px padding on both sides */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
+
 footer {
     background-color: #000000; /* Black background for the footer */
     color: white; /* White text color */
     text-align: center;
     padding: 10px 0; /* Adjust padding as needed */
     font-size: 12px; /* Font size set to 12 */
+    width: 100%; /* Ensure footer spans full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .footer-content a {
