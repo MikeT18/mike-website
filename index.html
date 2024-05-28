@@ -2,68 +2,69 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYJ27X2YH6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYJ27X2YH6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-ZYJ27X2YH6');
-</script>
+      gtag('config', 'G-ZYJ27X2YH6');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mike Tattersall</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-    <h1 class="name-left">Mike Tattersall</h1>
-    <div class="nav-links">
-        <a href="index.html" class="home-link">Home</a>
-     <!--   <a href="about.html" class="home-link">About</a> -->
-    </div>
-</div>
-    </header>
+    <div id="header-placeholder"></div>
+
     <main>
         <div class="profile-section">
             <img src="images/mike.png" alt="Mike Tattersall" class="profile-img">
         </div>
-      <br>  <div class="intro-text">
-                <p>Hello, my name is Mike Tattersall. I'm a Product Manager and Chief Delivery Officer working at Hippo Digital. This is my personal blog and website where I share my thoughts.</p>
-            </div>
-        </div> </br>
         <br>
-       <div class="blog-link">
-    <h2>Blog</h2>
-    <div>
-        <a href="blogs/service-design.html">Service Design</a>
-        <span class="post-date"> - 12th February 2023</span>
-    </div>
-     <div>
-        <a href="blogs/my-product-management-principles.html">My Product Management Principles</a>
-        <span class="post-date"> - 12th February 2023</span>
-    </div>       
-    <div>
-        <a href="blogs/product-management-in-government.html">Product Management In Government</a>
-        <span class="post-date"> - 12th February 2023</span>
-    </div>
-    <div>
-        <a href="blogs/building-effective-teams-to-solve-problems.html">Building Effective Teams to Solve Problems</a>
-        <span class="post-date"> - 12th February 2023</span>
-    </div>
- </br>
-    <h2>More</h2>
-    <a href="career-history.html">Find out more about my career</a>     
-</div>
+        <div class="intro-text">
+            <p>Hello, my name is Mike Tattersall. I'm a Product Manager and Chief Delivery Officer working at Hippo Digital. This is my personal blog and website where I share my thoughts.</p>
+        </div>
+        <br>
+        <div class="blog-link">
+            <h2>Blog</h2>
+            <div>
+                <a href="blogs/service-design.html">Service Design</a>
+                <span class="post-date"> - 12th February 2023</span>
+            </div>
+            <div>
+                <a href="blogs/my-product-management-principles.html">My Product Management Principles</a>
+                <span class="post-date"> - 12th February 2023</span>
+            </div>       
+            <div>
+                <a href="blogs/product-management-in-government.html">Product Management In Government</a>
+                <span class="post-date"> - 12th February 2023</span>
+            </div>
+            <div>
+                <a href="blogs/building-effective-teams-to-solve-problems.html">Building Effective Teams to Solve Problems</a>
+                <span class="post-date"> - 12th February 2023</span>
+            </div>
+            <br>
+            <h2>More</h2>
+            <a href="career-history.html">Find out more about my career</a>     
+        </div>
     </main>
-</body>
+
     <div id="footer-placeholder"></div>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('footer.html')
-        .then(response => response.text())
-        .then(text => document.getElementById('footer-placeholder').innerHTML = text);
-});
-</script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Load the global header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(text => document.getElementById('header-placeholder').innerHTML = text);
+        
+        // Load the global footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(text => document.getElementById('footer-placeholder').innerHTML = text);
+    });
+    </script>
+</body>
 </html>
