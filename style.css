@@ -56,23 +56,25 @@ main {
 }
 
 .profile-section {
-    text-align: center; /* Center the profile image */
+    display: flex;
+    align-items: center;
     margin-bottom: 20px;
 }
 
 .profile-img {
     width: 163px; /* Half the original width */
     height: 215.5px; /* Half the original height, rounded */
+    margin-right: 20px; /* Space between image and text */
     border-radius: 0; /* Optional: remove if you want square corners */
 }
 
 .intro-text {
-    text-align: center; /* Center the intro text */
-    margin-top: 20px;
+    flex: 1; /* Allow text to take the remaining space */
 }
 
 .intro-text p {
     font-size: 1.4em;
+    margin: 0;
 }
 
 .blog-link {
