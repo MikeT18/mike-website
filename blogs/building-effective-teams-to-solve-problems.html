@@ -16,16 +16,9 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-     <header>
-       <div class="header-content">
-    <h1 class="name-left">Mike Tattersall</h1>
-    <div class="nav-links">
-        <a href="../index.html" class="home-link">Home</a>
-        <!--   <a href="about.html" class="home-link">About</a> -->
-    </div>
-</div>
-    </header>
-   <main>
+    <div id="header-placeholder"></div>
+
+    <main>
         <div class="blog-content">
             <h2>Building Effective Teams to Solve Problems</h2>
             <h3>The Importance of Understanding Problems</h3> 
@@ -39,13 +32,21 @@
             <p>Ultimately, effective problem solving requires a clear understanding of the problem, engagement with people, a well-defined communication strategy, and a team built with the right skills and experiences. By focusing on these elements, teams can work towards solving problems in an efficient and effective manner.</p>
         </div>
     </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Load the global header
+        fetch('../header.html')
+            .then(response => response.text())
+            .then(text => document.getElementById('header-placeholder').innerHTML = text);
+        
+        // Load the global footer
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(text => document.getElementById('footer-placeholder').innerHTML = text);
+    });
+    </script>
 </body>
-<div id="footer-placeholder"></div>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('../footer.html')
-        .then(response => response.text())
-        .then(text => document.getElementById('footer-placeholder').innerHTML = text);
-});
-</script>
 </html>
