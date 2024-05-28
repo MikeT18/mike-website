@@ -16,16 +16,9 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-     <header>
-       <div class="header-content">
-    <h1 class="name-left">Mike Tattersall</h1>
-    <div class="nav-links">
-        <a href="../index.html" class="home-link">Home</a>
-        <!--   <a href="about.html" class="home-link">About</a> -->
-    </div>
-</div>
-    </header>
-   <main>
+    <div id="header-placeholder"></div>
+
+    <main>
         <div class="blog-content">
             <h2>Product Management In Government</h2>
             <p>Product Management in government organisations poses unique challenges and opportunities compared to private-sector product management. Government organisations are tasked with providing services to the public and ensuring they meet the needs and expectations of citizens. It's not about profit, it is often about efficient use of what they deliver. As a result, product managers must have a clear understanding of their users and the public policies that impact their products.</p>
@@ -37,13 +30,21 @@
             <p>In conclusion, product management in government organisations is a complex and challenging role, but it also offers the opportunity to make a real impact on the lives of citizens. Product managers must possess a unique combination of skills, including the ability to understand complex political and regulatory environments, to engage with stakeholders, to ensure that products are delivered within a service context, and to build excitement and engagement around their products.</p>
         </div>
     </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Load the global header
+        fetch('../header.html')
+            .then(response => response.text())
+            .then(text => document.getElementById('header-placeholder').innerHTML = text);
+        
+        // Load the global footer
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(text => document.getElementById('footer-placeholder').innerHTML = text);
+    });
+    </script>
 </body>
-   <div id="footer-placeholder"></div>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('../footer.html')
-        .then(response => response.text())
-        .then(text => document.getElementById('footer-placeholder').innerHTML = text);
-});
-</script>
 </html>
