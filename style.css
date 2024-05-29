@@ -72,6 +72,29 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
+.profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.profile-img {
+    width: 163px; /* Half the original width */
+    height: 215.5px; /* Half the original height, rounded */
+    margin-right: 20px; /* Space between image and text */
+    border-radius: 0; /* Optional: remove if you want square corners */
+}
+
+.intro-text {
+    flex: 1; /* Allow text to take the remaining space */
+}
+
+.intro-text p {
+    font-size: 1.2em; /* Slightly larger font size for introductory text */
+    margin: 0;
+}
+
 .blog-content {
     margin-bottom: 20px;
 }
@@ -111,9 +134,10 @@ footer {
     text-decoration: underline;
 }
 
-.original-size-image {
-    max-width: 100%; /* ensures the image is never wider than its container */
-    height: auto; /* maintains the aspect ratio */
-    display: block; /* makes the image a block-level element */
+.profile-img, .original-size-image {
+    max-width: 100%; /* Ensures the image is never wider than its container */
+    max-height: 400px; /* Limits the height of images */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Makes the image a block-level element */
     margin: 20px 0; /* Vertical margin for spacing */
 }
