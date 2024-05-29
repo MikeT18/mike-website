@@ -70,26 +70,18 @@ main {
     padding: 20px; /* Added padding */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center text for a cleaner layout */
 }
 
 .profile-section {
-    display: flex;
-    align-items: flex-start; /* Align items to the start for better text alignment */
     margin-bottom: 20px;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    max-width: 900px; /* Limit the width of the profile section */
 }
 
-.profile-img {
-    width: 163px; /* Half the original width */
-    height: 215.5px; /* Half the original height, rounded */
-    margin-right: 20px; /* Space between image and text */
-    border-radius: 0; /* Optional: remove if you want square corners */
-}
-
-.intro-text {
-    flex: 1; /* Allow text to take the remaining space */
-    max-width: 600px; /* Ensure text container does not stretch too much */
+.profile-img-top {
+    width: 150px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Optional: round the image */
+    margin-bottom: 20px; /* Space between image and text */
 }
 
 .intro-text p {
@@ -99,7 +91,6 @@ main {
 
 .blog-link {
     margin-top: 20px; /* Add margin top to create space between intro and blog links */
-    clear: both; /* Clear floats to prevent overlap */
 }
 
 a {
