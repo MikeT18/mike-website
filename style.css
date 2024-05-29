@@ -74,7 +74,7 @@ main {
 
 .profile-section {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Align items to the start for better text alignment */
     margin-bottom: 20px;
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
@@ -95,8 +95,9 @@ main {
     margin: 0;
 }
 
-.blog-content {
+.blog-link {
     margin-bottom: 20px;
+    clear: both; /* Clear floats to prevent overlap */
 }
 
 a {
