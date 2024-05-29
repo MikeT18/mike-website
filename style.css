@@ -96,8 +96,7 @@ main {
 }
 
 .blog-link {
-    margin-bottom: 20px;
-    clear: both; /* Clear floats to prevent overlap */
+    margin-top: 20px; /* Add margin top to create space between intro and blog links */
 }
 
 a {
