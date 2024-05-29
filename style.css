@@ -70,10 +70,10 @@ main {
     padding: 20px; /* Added padding */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    text-align: center; /* Center text for a cleaner layout */
 }
 
 .profile-section {
+    text-align: center; /* Center the text in the profile section */
     margin-bottom: 20px;
 }
 
@@ -91,6 +91,7 @@ main {
 
 .blog-link {
     margin-top: 20px; /* Add margin top to create space between intro and blog links */
+    text-align: left; /* Ensure blog links are left aligned */
 }
 
 a {
