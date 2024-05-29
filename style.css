@@ -77,6 +77,7 @@ main {
     align-items: flex-start; /* Align items to the start for better text alignment */
     margin-bottom: 20px;
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    max-width: 900px; /* Limit the width of the profile section */
 }
 
 .profile-img {
@@ -88,6 +89,7 @@ main {
 
 .intro-text {
     flex: 1; /* Allow text to take the remaining space */
+    max-width: 600px; /* Ensure text container does not stretch too much */
 }
 
 .intro-text p {
