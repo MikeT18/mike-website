@@ -114,4 +114,6 @@ footer {
 .original-size-image {
     max-width: 100%; /* ensures the image is never wider than its container */
     height: auto; /* maintains the aspect ratio */
-   
+    display: block; /* makes the image a block-level element */
+    margin: 20px 0; /* Vertical margin for spacing */
+}
