@@ -80,7 +80,7 @@ main {
 .profile-img-top {
     width: 150px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Optional: round the image */
+    border-radius: 0%; /* Optional: round the image */
     margin-bottom: 20px; /* Space between image and text */
 }
 
