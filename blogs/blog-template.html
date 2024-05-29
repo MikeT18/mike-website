@@ -16,28 +16,29 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-     <header>
-       <div class="header-content">
-    <h1 class="name-left">Mike Tattersall</h1>
-    <div class="nav-links">
-        <a href="../index.html" class="home-link">Home</a>
-        <!--   <a href="about.html" class="home-link">About</a> -->
-    </div>
-</div>
-    </header>
-   <main>
+    <div id="header-placeholder"></div>
+
+    <main>
         <div class="blog-content">
-        <h2>header</h2>
-        <p>words</p>
-            </div>
+            <h2>header</h2>
+            <p>words</p>
+        </div>
     </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Load the global header
+        fetch('../header.html')
+            .then(response => response.text())
+            .then(text => document.getElementById('header-placeholder').innerHTML = text);
+        
+        // Load the global footer
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(text => document.getElementById('footer-placeholder').innerHTML = text);
+    });
+    </script>
 </body>
-<div id="footer-placeholder"></div>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('../footer.html')
-        .then(response => response.text())
-        .then(text => document.getElementById('footer-placeholder').innerHTML = text);
-});
-</script>
 </html>
