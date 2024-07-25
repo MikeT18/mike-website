@@ -14,6 +14,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mike Tattersall</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 8px 0;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .blog-card h3 {
+            margin: 0 0 8px;
+        }
+        .blog-card span {
+            color: #555;
+        }
+    </style>
 </head>
 <body>
     <div id="header-placeholder"></div>
@@ -27,21 +47,21 @@
         </div>
         <div class="blog-link">
             <h2>Blog</h2>
-            <div>
-                <a href="blogs/service-design.html">Service Design</a>
-                <span class="post-date"> - 12th February 2023</span>
+            <div class="blog-card" onclick="window.location.href='blogs/service-design.html'">
+                <h3>Service Design</h3>
+                <span class="post-date">12th February 2023</span>
             </div>
-            <div>
-                <a href="blogs/my-product-management-principles.html">My Product Management Principles</a>
-                <span class="post-date"> - 12th February 2023</span>
+            <div class="blog-card" onclick="window.location.href='blogs/my-product-management-principles.html'">
+                <h3>My Product Management Principles</h3>
+                <span class="post-date">12th February 2023</span>
             </div>       
-            <div>
-                <a href="blogs/product-management-in-government.html">Product Management In Government</a>
-                <span class="post-date"> - 12th February 2023</span>
+            <div class="blog-card" onclick="window.location.href='blogs/product-management-in-government.html'">
+                <h3>Product Management In Government</h3>
+                <span class="post-date">12th February 2023</span>
             </div>
-            <div>
-                <a href="blogs/building-effective-teams-to-solve-problems.html">Building Effective Teams to Solve Problems</a>
-                <span class="post-date"> - 12th February 2023</span>
+            <div class="blog-card" onclick="window.location.href='blogs/building-effective-teams-to-solve-problems.html'">
+                <h3>Building Effective Teams to Solve Problems</h3>
+                <span class="post-date">12th February 2023</span>
             </div>
             <h2>More</h2>
             <a href="career-history.html">Find out more about my career</a>     
