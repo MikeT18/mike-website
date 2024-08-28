@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYJ27X2YH6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZYJ27X2YH6');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity System</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="blog-content">
+            <h2>Master Your Tasks with This Simple Productivity System</h2>
+            <p>Managing tasks efficiently is key to enhancing productivity and reducing stress. The flowchart below outlines a simple but effective system to handle tasks as they come to you, ensuring that nothing gets overlooked or delayed. This system helps in deciding whether a task is actionable, who should handle it, and when it should be done.</p>
+            
+            <img src="../images/GTD2.jpg" alt="Productivity Flowchart" style="max-width:100%; height:auto;">
+
+            <h3>Understanding the Flow</h3>
+            <p>The process begins with identifying the origin of the task, which could be from various sources like your brain, communication tools, or notifications. The first decision point asks whether the task is actionable. If it's not, you simply discard it. If it is actionable, you move on to the next question: is this task for you? If it’s not your task, you delegate it to the appropriate person and agree on a deadline.</p>
+
+            <p>If the task is yours, the next step is to determine whether it will take less than five minutes. If it does, the best approach is to do it immediately, saving you the trouble of adding it to your task list. If the task requires more than five minutes, the next consideration is whether you can delegate it. If delegation is possible, assign it to someone and set a deadline. If not, you need to decide whether it needs to be done right away.</p>
+
+            <p>If the task does not need immediate action, assign it a due date and log it in your task manager, such as Todoist, to keep track of its completion. This structured approach helps ensure that tasks are appropriately managed without being overwhelming.</p>
+
+            <h3>Why This System Works</h3>
+            <p>This flowchart-based approach helps in systematically addressing tasks by breaking down decisions into manageable steps. By filtering out non-actionable items and making quick decisions on what to do with each task, you can maintain focus on what truly matters. Delegation and due dates ensure that every task is accounted for, preventing procrastination and last-minute rushes. Integrating this process into your daily routine can significantly improve your task management and overall productivity.</p>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Load the global header
+        fetch('../header.html')
+            .then(response => response.text())
+            .then(text => document.getElementById('header-placeholder').innerHTML = text);
+        
+        // Load the global footer
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(text => document.getElementById('footer-placeholder').innerHTML = text);
+    });
+    </script>
+</body>
+</html>
