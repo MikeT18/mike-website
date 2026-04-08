@@ -8,12 +8,18 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-ZYJ27X2YH6');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mike Tattersall</title>
+    <title>Career History | Mike Tattersall</title>
+    <meta name="description" content="Over 17 years of experience in product management, service design, and digital transformation across government and the private sector.">
+    <meta property="og:title" content="Career History | Mike Tattersall">
+    <meta property="og:description" content="Over 17 years of experience in product management, service design, and digital transformation across government and the private sector.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://miketattersall.com/career-history.html">
+    <meta property="og:image" content="https://miketattersall.com/images/mike.png">
+    <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -72,30 +78,7 @@
 
     <div id="footer-placeholder"></div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Load the global header
-            fetch('header.html')
-                .then(response => response.text())
-                .then(text => {
-                    document.getElementById('header-placeholder').innerHTML = text;
-                    // Fix relative links for root pages
-                    const header = document.getElementById('header-placeholder');
-                    const links = header.getElementsByTagName('a');
-                    for (let link of links) {
-                        const href = link.getAttribute('href');
-                        if (href && href.startsWith('../')) {
-                            link.setAttribute('href', href.substring(3));
-                        }
-                    }
-                });
-
-            // Load the global footer
-            fetch('footer.html')
-                .then(response => response.text())
-                .then(text => document.getElementById('footer-placeholder').innerHTML = text);
-        });
-    </script>
+    <script src="components.js"></script>
 </body>
 
 </html>

@@ -8,14 +8,19 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-ZYJ27X2YH6');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mike Tattersall</title>
+    <title>Mike Tattersall — Product Manager &amp; Chief Delivery Officer</title>
+    <meta name="description" content="Personal blog and website of Mike Tattersall, Product Manager and Chief Delivery Officer at Hippo Digital. Thoughts on product management, service design, and productivity.">
+    <meta property="og:title" content="Mike Tattersall — Product Manager &amp; Chief Delivery Officer">
+    <meta property="og:description" content="Personal blog and website of Mike Tattersall, Product Manager and Chief Delivery Officer at Hippo Digital.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://miketattersall.com/">
+    <meta property="og:image" content="https://miketattersall.com/images/mike.png">
+    <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
@@ -23,7 +28,7 @@
 
     <main>
         <div class="profile-section">
-            <img src="images/mike.png" alt="Mike Tattersall" class="profile-img-top">
+            <img src="images/mike.png" alt="Mike Tattersall" class="profile-img-top" fetchpriority="high">
             <div class="intro-text">
                 <p>Hello, my name is Mike Tattersall. I'm a Product Manager and Chief Delivery Officer working at Hippo
                     Digital. This is my personal blog and website where I share my thoughts.</p>
@@ -31,32 +36,34 @@
         </div>
 
         <h2>Blog</h2>
+        <div class="search-container">
+            <input type="search" id="blog-search" placeholder="Search posts..." aria-label="Search blog posts">
+        </div>
         <div class="blog-grid">
-            <div class="blog-card" onclick="window.location.href='blogs/productivity.html'">
+            <a href="blogs/productivity.html" class="blog-card" data-title="My Productivity System" data-tags="productivity tools">
                 <h3>My Productivity System</h3>
                 <span class="post-date">28th August 2024</span>
-            </div>
-            <div class="blog-card" onclick="window.location.href='blogs/july-2024.html'">
+            </a>
+            <a href="blogs/july-2024.html" class="blog-card" data-title="July Month Post" data-tags="personal reflection monthly">
                 <h3>July Month Post</h3>
                 <span class="post-date">31st July 2024</span>
-            </div>
-            <div class="blog-card" onclick="window.location.href='blogs/service-design.html'">
+            </a>
+            <a href="blogs/service-design.html" class="blog-card" data-title="Service Design" data-tags="service-design design">
                 <h3>Service Design</h3>
                 <span class="post-date">12th February 2023</span>
-            </div>
-            <div class="blog-card" onclick="window.location.href='blogs/my-product-management-principles.html'">
+            </a>
+            <a href="blogs/my-product-management-principles.html" class="blog-card" data-title="My Product Management Principles" data-tags="product-management">
                 <h3>My Product Management Principles</h3>
                 <span class="post-date">12th February 2023</span>
-            </div>
-            <div class="blog-card" onclick="window.location.href='blogs/product-management-in-government.html'">
+            </a>
+            <a href="blogs/product-management-in-government.html" class="blog-card" data-title="Product Management In Government" data-tags="product-management government">
                 <h3>Product Management In Government</h3>
                 <span class="post-date">12th February 2023</span>
-            </div>
-            <div class="blog-card"
-                onclick="window.location.href='blogs/building-effective-teams-to-solve-problems.html'">
+            </a>
+            <a href="blogs/building-effective-teams-to-solve-problems.html" class="blog-card" data-title="Building Effective Teams to Solve Problems" data-tags="teams leadership">
                 <h3>Building Effective Teams to Solve Problems</h3>
                 <span class="post-date">12th February 2023</span>
-            </div>
+            </a>
         </div>
 
         <h2>More</h2>
@@ -67,28 +74,15 @@
 
     <div id="footer-placeholder"></div>
 
+    <script src="components.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Load the global header
-            fetch('header.html')
-                .then(response => response.text())
-                .then(text => {
-                    document.getElementById('header-placeholder').innerHTML = text;
-                    // Fix relative links for root pages
-                    const header = document.getElementById('header-placeholder');
-                    const links = header.getElementsByTagName('a');
-                    for (let link of links) {
-                        const href = link.getAttribute('href');
-                        if (href && href.startsWith('../')) {
-                            link.setAttribute('href', href.substring(3));
-                        }
-                    }
-                });
-
-            // Load the global footer
-            fetch('footer.html')
-                .then(response => response.text())
-                .then(text => document.getElementById('footer-placeholder').innerHTML = text);
+        document.getElementById('blog-search').addEventListener('input', function () {
+            var q = this.value.toLowerCase();
+            document.querySelectorAll('.blog-card').forEach(function (card) {
+                var title = card.getAttribute('data-title').toLowerCase();
+                var tags = card.getAttribute('data-tags').toLowerCase();
+                card.style.display = (!q || title.includes(q) || tags.includes(q)) ? '' : 'none';
+            });
         });
     </script>
 </body>
