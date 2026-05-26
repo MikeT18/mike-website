@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mike Tattersall — Blog</title>
+    <link>https://miketattersall.com/</link>
+    <atom:link href="https://miketattersall.com/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Writing on product management, service design, and delivery leadership from Mike Tattersall, Product Manager and Chief Delivery Officer at Hippo Digital.</description>
+    <language>en-gb</language>
+    <managingEditor>michaelrwtattersall@gmail.com (Mike Tattersall)</managingEditor>
+    <item>
+      <title>My productivity system</title>
+      <link>https://miketattersall.com/blogs/productivity.html</link>
+      <guid isPermaLink="true">https://miketattersall.com/blogs/productivity.html</guid>
+      <pubDate>Wed, 28 Aug 2024 09:00:00 +0100</pubDate>
+      <description>A simple flowchart-based productivity system for managing incoming tasks — actionable or not, delegate or do, immediate or scheduled.</description>
+    </item>
+    <item>
+      <title>Service Design</title>
+      <link>https://miketattersall.com/blogs/service-design.html</link>
+      <guid isPermaLink="true">https://miketattersall.com/blogs/service-design.html</guid>
+      <pubDate>Sun, 12 Feb 2023 09:00:00 +0000</pubDate>
+      <description>What service design is, what service designers do, and how service blueprints fit alongside user research and analytics.</description>
+    </item>
+    <item>
+      <title>My product management principles</title>
+      <link>https://miketattersall.com/blogs/my-product-management-principles.html</link>
+      <guid isPermaLink="true">https://miketattersall.com/blogs/my-product-management-principles.html</guid>
+      <pubDate>Sun, 12 Feb 2023 09:00:00 +0000</pubDate>
+      <description>Seven principles that guide my approach to product management — from starting with why and designing for real people to measuring what matters.</description>
+    </item>
+    <item>
+      <title>Product management in government</title>
+      <link>https://miketattersall.com/blogs/product-management-in-government.html</link>
+      <guid isPermaLink="true">https://miketattersall.com/blogs/product-management-in-government.html</guid>
+      <pubDate>Sun, 12 Feb 2023 09:00:00 +0000</pubDate>
+      <description>Product management in government is shaped by users, policy, stakeholders and service context — not profit. The unique challenges and skills it demands.</description>
+    </item>
+    <item>
+      <title>Building effective teams to solve problems</title>
+      <link>https://miketattersall.com/blogs/building-effective-teams-to-solve-problems.html</link>
+      <guid isPermaLink="true">https://miketattersall.com/blogs/building-effective-teams-to-solve-problems.html</guid>
+      <pubDate>Sun, 12 Feb 2023 09:00:00 +0000</pubDate>
+      <description>Effective problem-solving teams start by understanding the problem, build around skills not job titles, and scale only when communication can hold up.</description>
+    </item>
+  </channel>
+</rss>
