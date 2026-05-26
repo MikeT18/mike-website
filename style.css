@@ -191,12 +191,19 @@ main {
     justify-content: space-between;
     height: 100%;
     box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
 }
 
 .blog-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
     border-color: transparent;
+}
+
+.blog-card:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
 }
 
 .blog-card h3 {
