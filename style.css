@@ -213,6 +213,13 @@ main {
     margin-top: auto;
 }
 
+.blog-card .post-source {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+    font-style: italic;
+}
+
 a.blog-card {
     text-decoration: none;
     color: inherit;
