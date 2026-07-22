@@ -299,6 +299,61 @@ footer {
     text-decoration: none;
 }
 
+/* Quote Section */
+.quote-container {
+    margin: 40px 0;
+}
+
+.featured-quote {
+    position: relative;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.04) 0%, rgba(29, 78, 216, 0.01) 100%);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 0 16px 16px 0;
+    padding: 32px 40px 32px 60px;
+    margin: 0;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--primary-color);
+}
+
+.featured-quote:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(29, 78, 216, 0.03) 100%);
+    border-color: rgba(37, 99, 235, 0.2);
+}
+
+.quote-icon {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 4rem;
+    font-family: Georgia, serif;
+    color: rgba(37, 99, 235, 0.15);
+    line-height: 1;
+    user-select: none;
+}
+
+.quote-text {
+    font-size: 1.35rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--text-main);
+    margin: 0 0 12px 0;
+    font-style: italic;
+}
+
+.quote-author {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-style: normal;
+    display: block;
+}
+
 @media (max-width: 768px) {
     .profile-section {
         flex-direction: column;
@@ -335,5 +390,19 @@ footer {
 
     .intro-text p {
         font-size: 1rem;
+    }
+
+    .featured-quote {
+        padding: 24px 24px 24px 44px;
+    }
+
+    .quote-icon {
+        left: 12px;
+        font-size: 3rem;
+        top: 8px;
+    }
+
+    .quote-text {
+        font-size: 1.15rem;
     }
 }
