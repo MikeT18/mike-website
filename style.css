@@ -44,20 +44,23 @@ img {
 
 /* Skip link */
 .skip-link {
+    /* Off-canvas to the left rather than a small negative top offset — a fixed pixel offset
+       like top: -40px can be shorter than the element's actual rendered height (padding +
+       line-height here comes to roughly 46px), leaving a visible sliver at the top of every
+       page. Moving it off-screen horizontally hides it completely regardless of its height. */
     position: absolute;
-    top: -40px;
-    left: 8px;
+    top: 8px;
+    left: -9999px;
     z-index: 2000;
     background: var(--primary-color);
     color: #fff;
     padding: 10px 16px;
     border-radius: 8px;
     font-weight: 600;
-    transition: top 0.2s ease;
 }
 
 .skip-link:focus {
-    top: 8px;
+    left: 8px;
 }
 
 /* Header */
