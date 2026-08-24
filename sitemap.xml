@@ -13,6 +13,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://miketattersall.com/accessibility.html</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://miketattersall.com/blogs/service-design.html</loc>
     <lastmod>2026-05-26</lastmod>
     <changefreq>yearly</changefreq>

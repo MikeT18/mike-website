@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYJ27X2YH6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-ZYJ27X2YH6');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Statement | Mike Tattersall</title>
+    <meta name="description" content="What this site does to be accessible, what still needs work, and how to report a problem.">
+    <meta property="og:title" content="Accessibility Statement | Mike Tattersall">
+    <meta property="og:description" content="What this site does to be accessible, what still needs work, and how to report a problem.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://miketattersall.com/accessibility.html">
+    <meta property="og:image" content="https://miketattersall.com/images/mike.png">
+    <meta name="twitter:card" content="summary">
+    <link rel="alternate" type="application/rss+xml" title="Mike Tattersall — Blog" href="feed.xml">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div id="header-placeholder"></div>
+
+    <main id="main-content">
+        <div class="blog-content">
+            <p><a href="index.html">&larr; Back to the homepage</a></p>
+
+            <h2>Accessibility statement</h2>
+            <p>This site is run by me, Mike Tattersall. I want as many people as possible to be able to read it,
+                whether that's on a screen, with a screen reader, by voice, or by keyboard alone.</p>
+
+            <h3>What I've done</h3>
+            <p>The site is plain HTML, CSS, and a small amount of JavaScript, with no framework in the way. Every
+                page has a "Skip to main content" link, semantic headings, and landmark elements (header, main,
+                footer), so the structure holds up for a screen reader or a keyboard-only user, not just someone
+                looking at the page. Every interactive control is a real button, link, or labelled form field,
+                reachable and usable with a keyboard alone, with a visible focus style. I checked text and control
+                colours against WCAG's contrast minimums (4.5:1 for text, 3:1 for control boundaries like the blog
+                filter pills) rather than assuming they'd pass. The blog's content-type filter announces how many
+                posts are showing to screen readers as well as showing it on screen. Decorative elements, like the
+                quote mark on the homepage, are hidden from assistive technology so they don't get read out as
+                noise. Links that open in a new tab say so, for anyone who wouldn't otherwise know.</p>
+
+            <h3>What I'm aiming for</h3>
+            <p>I'm holding this site to WCAG 2.2 AA. That's not a legal requirement here, since it's a personal site
+                rather than a public sector service, but it's the standard I'd expect from anyone writing for this
+                audience.</p>
+
+            <h3>What I haven't done</h3>
+            <p>I've reviewed this manually and with AI-assisted tooling, not with a full professional audit or an
+                automated scanner like axe or Lighthouse, so there will be gaps I haven't found yet. Older content
+                (the career history page and the blog posts themselves) hasn't had the same scrutiny as the
+                homepage.</p>
+
+            <h3>Reporting a problem</h3>
+            <p>If something on this site doesn't work for you, <a href="mailto:michaelrwtattersall@gmail.com">email
+                    me</a> and tell me what happened and what you were using (browser, screen reader, device). I'll
+                fix what I can.</p>
+
+            <p><em>Last reviewed: August 2026.</em></p>
+
+            <p><a href="index.html">&larr; Back to the homepage</a></p>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="components.js"></script>
+</body>
+
+</html>
