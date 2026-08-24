@@ -260,6 +260,13 @@ a.blog-card {
 }
 
 .filter-pill {
+    /* Strip native button chrome — without this, some browsers (notably Chrome/Edge on
+       Windows) keep the default grey control appearance regardless of the background/border
+       overrides below. Safari on macOS is more forgiving, which is why this only showed up
+       once deployed and viewed elsewhere. */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     font-family: inherit;
     font-size: 0.875rem;
     font-weight: 600;
