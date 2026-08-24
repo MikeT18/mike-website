@@ -25,9 +25,10 @@
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <div id="header-placeholder"></div>
 
-    <main>
+    <main id="main-content">
         <div class="profile-section">
             <img src="images/mike.png" alt="Mike Tattersall" class="profile-img-top" fetchpriority="high">
             <div class="intro-text">
@@ -38,7 +39,7 @@
 
         <div class="quote-container">
             <blockquote class="featured-quote">
-                <span class="quote-icon">“</span>
+                <span class="quote-icon" aria-hidden="true">“</span>
                 <p class="quote-text">We choose to go to the Moon in this decade and do the other things, not because they are easy, but because they are hard</p>
                 <cite class="quote-author">— John F. Kennedy</cite>
             </blockquote>
@@ -46,7 +47,8 @@
 
         <h2>Blog</h2>
         <div class="search-container">
-            <input type="search" id="blog-search" placeholder="Search posts..." aria-label="Search blog posts">
+            <label for="blog-search" class="visually-hidden">Search blog posts</label>
+            <input type="search" id="blog-search" placeholder="Search posts...">
         </div>
         <div class="filter-container" role="group" aria-label="Filter blog posts by content type">
             <button type="button" class="filter-pill is-active" data-type="all" aria-current="true">All</button>
