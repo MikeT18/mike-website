@@ -2,14 +2,6 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYJ27X2YH6"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-ZYJ27X2YH6');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mike Tattersall — Product Manager &amp; Chief Delivery Officer</title>
@@ -18,12 +10,16 @@
     <meta property="og:description" content="Mike Tattersall on scaling delivery organisations in government and regulated sectors, and on AI agents for public services. This is where he writes about it all.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://miketattersall.com/">
+    <link rel="canonical" href="https://miketattersall.com/">
     <meta property="og:image" content="https://miketattersall.com/images/mike.png">
     <meta name="twitter:card" content="summary">
     <link rel="alternate" type="application/rss+xml" title="Mike Tattersall — Blog" href="feed.xml">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -33,7 +29,7 @@
 
     <main id="main-content">
         <div class="profile-section">
-            <img src="images/mike.png" alt="Mike Tattersall" class="profile-img-top" fetchpriority="high">
+            <img src="images/mike.webp" alt="Mike Tattersall" class="profile-img-top" width="140" height="140" fetchpriority="high">
             <div class="intro-text">
                 <p>Hello, my name is Mike Tattersall. I've spent the last several years scaling Hippo Digital's
                     consultancy workforce from 60 to over 700 people, delivering digital services for government and
@@ -49,108 +45,110 @@
             </div>
         </div>
 
-        <h2>Blog</h2>
+        <h2 id="blog">Blog</h2>
         <div class="search-container">
             <label for="blog-search" class="visually-hidden">Search blog posts</label>
             <input type="search" id="blog-search" placeholder="Search posts...">
         </div>
         <div class="filter-container" role="group" aria-label="Filter blog posts by content type">
-            <button type="button" class="filter-pill is-active" data-type="all" aria-current="true">All</button>
-            <button type="button" class="filter-pill" data-type="ai" aria-current="false">AI</button>
-            <button type="button" class="filter-pill" data-type="product-management" aria-current="false">Product Management</button>
-            <button type="button" class="filter-pill" data-type="government" aria-current="false">Government</button>
-            <button type="button" class="filter-pill" data-type="service-design" aria-current="false">Service Design</button>
-            <button type="button" class="filter-pill" data-type="leadership" aria-current="false">Leadership &amp; Teams</button>
-            <button type="button" class="filter-pill" data-type="productivity" aria-current="false">Productivity</button>
+            <button type="button" class="filter-pill is-active" data-type="all" aria-pressed="true">All</button>
+            <button type="button" class="filter-pill" data-type="ai" aria-pressed="false">AI</button>
+            <button type="button" class="filter-pill" data-type="product-management" aria-pressed="false">Product Management</button>
+            <button type="button" class="filter-pill" data-type="government" aria-pressed="false">Government</button>
+            <button type="button" class="filter-pill" data-type="service-design" aria-pressed="false">Service Design</button>
+            <button type="button" class="filter-pill" data-type="leadership" aria-pressed="false">Leadership &amp; Teams</button>
+            <button type="button" class="filter-pill" data-type="productivity" aria-pressed="false">Productivity</button>
         </div>
         <p id="filter-status" class="visually-hidden" role="status" aria-live="polite"></p>
         <div class="blog-grid">
+            <!-- posts:start — generated from data/posts.json by scripts/build.mjs, do not edit by hand -->
             <a href="https://hippodigital.co.uk/ten-years-of-delivery-the-next-ten-of-change/" class="blog-card" target="_blank" rel="noopener noreferrer" data-title="Ten Years of Delivery: The Next Ten of Change" data-tags="hippo government delivery leadership" data-type="government">
                 <h3>Ten Years of Delivery: The Next Ten of Change<span class="visually-hidden"> (opens in a new tab)</span></h3>
-                <span class="post-date">October 2026</span>
+                <time class="post-date" datetime="2026-10">October 2026</time>
                 <span class="post-source">Hippo Digital</span>
             </a>
             <a href="https://www.linkedin.com/pulse/agreeable-machine-why-your-ai-tools-telling-you-what-want-tattersall-t8tgc" class="blog-card" target="_blank" rel="noopener noreferrer" data-title="The Agreeable Machine: Why your AI tools are telling you what you want to hear" data-tags="ai" data-type="ai">
                 <h3>The Agreeable Machine: Why your AI tools are telling you what you want to hear<span class="visually-hidden"> (opens in a new tab)</span></h3>
-                <span class="post-date">September 2026</span>
+                <time class="post-date" datetime="2026-09">September 2026</time>
                 <span class="post-source">LinkedIn</span>
             </a>
             <a href="https://hippodigital.co.uk/insights/the-potential-and-downsides-of-creating-an-ai-powered-project-brain/" class="blog-card" target="_blank" rel="noopener noreferrer" data-title="The potential and downsides of creating an AI-powered project brain" data-tags="hippo ai project management" data-type="ai">
                 <h3>The potential and downsides of creating an AI-powered project brain<span class="visually-hidden"> (opens in a new tab)</span></h3>
-                <span class="post-date">20th August 2026</span>
+                <time class="post-date" datetime="2026-08-20">20th August 2026</time>
                 <span class="post-source">Hippo Digital</span>
             </a>
             <a href="https://hippodigital.co.uk/insights/what-we-learned-building-a-government-service-with-an-ai-agent/" class="blog-card" target="_blank" rel="noopener noreferrer" data-title="What we learned building a government service with an AI agent" data-tags="hippo ai government" data-type="ai">
                 <h3>What we learned building a government service with an AI agent<span class="visually-hidden"> (opens in a new tab)</span></h3>
-                <span class="post-date">4th August 2026</span>
+                <time class="post-date" datetime="2026-08-04">4th August 2026</time>
                 <span class="post-source">Hippo Digital</span>
             </a>
             <a href="https://hippodigital.co.uk/insights/most-organisations-arent-ready-for-ai/" class="blog-card" target="_blank" rel="noopener noreferrer" data-title="Most organisations aren't ready for AI" data-tags="hippo ai" data-type="ai">
                 <h3>Most organisations aren't ready for AI<span class="visually-hidden"> (opens in a new tab)</span></h3>
-                <span class="post-date">March 2026</span>
+                <time class="post-date" datetime="2026-03">March 2026</time>
                 <span class="post-source">Hippo Digital</span>
             </a>
-            <a href="https://hippodigital.co.uk/insights/product-management-mindsets-agile-adaptable-by-nature/" class="blog-card" target="_blank" rel="noopener noreferrer" data-title="Product Management Mindsets: Agile & adaptable by nature" data-tags="hippo product-management agile" data-type="product-management">
+            <a href="https://hippodigital.co.uk/insights/product-management-mindsets-agile-adaptable-by-nature/" class="blog-card" target="_blank" rel="noopener noreferrer" data-title="Product Management Mindsets: Agile &amp; adaptable by nature" data-tags="hippo product-management agile" data-type="product-management">
                 <h3>Product Management Mindsets: Agile &amp; adaptable by nature<span class="visually-hidden"> (opens in a new tab)</span></h3>
-                <span class="post-date">June 2025</span>
+                <time class="post-date" datetime="2025-06">June 2025</time>
                 <span class="post-source">Hippo Digital</span>
             </a>
             <a href="blogs/productivity.html" class="blog-card" data-title="My Productivity System" data-tags="productivity tools" data-type="productivity">
                 <h3>My Productivity System</h3>
-                <span class="post-date">28th August 2024</span>
+                <time class="post-date" datetime="2024-08-28">28th August 2024</time>
                 <span class="post-source">miketattersall.com</span>
             </a>
             <a href="blogs/service-design.html" class="blog-card" data-title="Service Design" data-tags="service-design design" data-type="service-design">
                 <h3>Service Design</h3>
-                <span class="post-date">12th February 2023</span>
+                <time class="post-date" datetime="2023-02-12">12th February 2023</time>
                 <span class="post-source">miketattersall.com</span>
             </a>
             <a href="blogs/my-product-management-principles.html" class="blog-card" data-title="My Product Management Principles" data-tags="product-management" data-type="product-management">
                 <h3>My Product Management Principles</h3>
-                <span class="post-date">12th February 2023</span>
+                <time class="post-date" datetime="2023-02-12">12th February 2023</time>
                 <span class="post-source">miketattersall.com</span>
             </a>
             <a href="blogs/product-management-in-government.html" class="blog-card" data-title="Product Management In Government" data-tags="product-management government" data-type="product-management">
                 <h3>Product Management In Government</h3>
-                <span class="post-date">12th February 2023</span>
+                <time class="post-date" datetime="2023-02-12">12th February 2023</time>
                 <span class="post-source">miketattersall.com</span>
             </a>
             <a href="blogs/building-effective-teams-to-solve-problems.html" class="blog-card" data-title="Building Effective Teams to Solve Problems" data-tags="teams leadership" data-type="leadership">
                 <h3>Building Effective Teams to Solve Problems</h3>
-                <span class="post-date">12th February 2023</span>
+                <time class="post-date" datetime="2023-02-12">12th February 2023</time>
                 <span class="post-source">miketattersall.com</span>
             </a>
             <a href="https://hippodigital.co.uk/insights/a-positive-approach-to-risk-mitigation-requires-human-centred-thinking/" class="blog-card" target="_blank" rel="noopener noreferrer" data-title="A positive approach to risk mitigation requires human-centred thinking" data-tags="hippo risk human-centred" data-type="service-design">
                 <h3>A positive approach to risk mitigation requires human-centred thinking<span class="visually-hidden"> (opens in a new tab)</span></h3>
-                <span class="post-date">September 2022</span>
+                <time class="post-date" datetime="2022-09">September 2022</time>
                 <span class="post-source">Hippo Digital</span>
             </a>
             <a href="https://services.blog.gov.uk/2021/08/03/building-a-single-sign-on-for-government-what-weve-learnt-so-far/" class="blog-card" target="_blank" rel="noopener noreferrer" data-title="Building a single sign-on for government: What we've learnt so far" data-tags="gds government sso" data-type="government">
                 <h3>Building a single sign-on for government: What we've learnt so far<span class="visually-hidden"> (opens in a new tab)</span></h3>
-                <span class="post-date">3rd August 2021</span>
+                <time class="post-date" datetime="2021-08-03">3rd August 2021</time>
                 <span class="post-source">GDS / Services in Government</span>
             </a>
             <a href="https://dwpdigital.blog.gov.uk/2015/06/04/business-subject-matter-experts-get-one-or-two/" class="blog-card" target="_blank" rel="noopener noreferrer" data-title="Business Subject Matter Experts – Get one (or two)" data-tags="dwp government" data-type="government">
                 <h3>Business Subject Matter Experts – Get one (or two)<span class="visually-hidden"> (opens in a new tab)</span></h3>
-                <span class="post-date">4th June 2015</span>
+                <time class="post-date" datetime="2015-06-04">4th June 2015</time>
                 <span class="post-source">DWP Digital</span>
             </a>
             <a href="https://dwpdigital.blog.gov.uk/2014/10/27/for-staff-with-staff-improving-the-digital-back-office/" class="blog-card" target="_blank" rel="noopener noreferrer" data-title="For staff, with staff – Improving the digital back office" data-tags="dwp government" data-type="government">
                 <h3>For staff, with staff – Improving the digital back office<span class="visually-hidden"> (opens in a new tab)</span></h3>
-                <span class="post-date">27th October 2014</span>
+                <time class="post-date" datetime="2014-10-27">27th October 2014</time>
                 <span class="post-source">DWP Digital</span>
             </a>
             <a href="https://dwpdigital.blog.gov.uk/2014/07/01/user-needs-take-the-lead/" class="blog-card" target="_blank" rel="noopener noreferrer" data-title="User needs take the lead" data-tags="dwp government user-needs" data-type="government">
                 <h3>User needs take the lead<span class="visually-hidden"> (opens in a new tab)</span></h3>
-                <span class="post-date">1st July 2014</span>
+                <time class="post-date" datetime="2014-07-01">1st July 2014</time>
                 <span class="post-source">DWP Digital</span>
             </a>
+            <!-- posts:end -->
         </div>
 
         <p class="no-results">No posts match your filter. Try a different content type or search term.</p>
 
         <h2>More</h2>
-        <div style="margin-top: 20px;">
+        <div class="more-links">
             <a href="career-history.html" class="button">Find out more about my career &rarr;</a>
         </div>
     </main>
@@ -189,10 +187,10 @@
                 pill.addEventListener('click', function () {
                     pills.forEach(function (p) {
                         p.classList.remove('is-active');
-                        p.setAttribute('aria-current', 'false');
+                        p.setAttribute('aria-pressed', 'false');
                     });
                     pill.classList.add('is-active');
-                    pill.setAttribute('aria-current', 'true');
+                    pill.setAttribute('aria-pressed', 'true');
                     activeType = pill.getAttribute('data-type');
                     applyFilters();
                 });

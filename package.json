@@ -1,0 +1,19 @@
+{
+  "name": "mike-website",
+  "private": true,
+  "description": "Build and check scripts for miketattersall.com. The site itself is plain static files.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check:generated": "node scripts/build.mjs --check",
+    "check:links": "linkinator index.html header.html footer.html 404.html accessibility.html --recurse --skip \"^(?!http://localhost)\"",
+    "check:links:external": "linkinator index.html header.html footer.html 404.html accessibility.html --recurse --retry --skip \"linkedin\\\\.com|twitter\\\\.com|x\\\\.com|fonts\\\\.(googleapis|gstatic)\\\\.com|mailto:\"",
+    "serve": "http-server . -p 8080 -s",
+    "check:a11y": "pa11y-ci"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "wait-on": "^8.0.1",
+    "linkinator": "^6.1.2",
+    "pa11y-ci": "^5.0.0"
+  }
+}

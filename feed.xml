@@ -1,17 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated from data/posts.json by scripts/build.mjs, do not edit by hand -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mike Tattersall — Blog</title>
     <link>https://miketattersall.com/</link>
     <atom:link href="https://miketattersall.com/feed.xml" rel="self" type="application/rss+xml" />
-    <description>Writing on product management, service design, and delivery leadership from Mike Tattersall, Product Manager and Chief Delivery Officer at Hippo Digital.</description>
+    <description>Writing on product management, service design, delivery leadership and AI from Mike Tattersall, Chief Delivery Officer at Hippo Digital, wherever it's published.</description>
     <language>en-gb</language>
     <managingEditor>michaelrwtattersall@gmail.com (Mike Tattersall)</managingEditor>
     <item>
-      <title>My productivity system</title>
+      <title>Ten Years of Delivery: The Next Ten of Change</title>
+      <link>https://hippodigital.co.uk/ten-years-of-delivery-the-next-ten-of-change/</link>
+      <guid isPermaLink="true">https://hippodigital.co.uk/ten-years-of-delivery-the-next-ten-of-change/</guid>
+      <pubDate>Thu, 01 Oct 2026 09:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Agreeable Machine: Why your AI tools are telling you what you want to hear</title>
+      <link>https://www.linkedin.com/pulse/agreeable-machine-why-your-ai-tools-telling-you-what-want-tattersall-t8tgc</link>
+      <guid isPermaLink="true">https://www.linkedin.com/pulse/agreeable-machine-why-your-ai-tools-telling-you-what-want-tattersall-t8tgc</guid>
+      <pubDate>Tue, 01 Sep 2026 09:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The potential and downsides of creating an AI-powered project brain</title>
+      <link>https://hippodigital.co.uk/insights/the-potential-and-downsides-of-creating-an-ai-powered-project-brain/</link>
+      <guid isPermaLink="true">https://hippodigital.co.uk/insights/the-potential-and-downsides-of-creating-an-ai-powered-project-brain/</guid>
+      <pubDate>Thu, 20 Aug 2026 09:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>What we learned building a government service with an AI agent</title>
+      <link>https://hippodigital.co.uk/insights/what-we-learned-building-a-government-service-with-an-ai-agent/</link>
+      <guid isPermaLink="true">https://hippodigital.co.uk/insights/what-we-learned-building-a-government-service-with-an-ai-agent/</guid>
+      <pubDate>Tue, 04 Aug 2026 09:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Most organisations aren't ready for AI</title>
+      <link>https://hippodigital.co.uk/insights/most-organisations-arent-ready-for-ai/</link>
+      <guid isPermaLink="true">https://hippodigital.co.uk/insights/most-organisations-arent-ready-for-ai/</guid>
+      <pubDate>Sun, 01 Mar 2026 09:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Product Management Mindsets: Agile &amp; adaptable by nature</title>
+      <link>https://hippodigital.co.uk/insights/product-management-mindsets-agile-adaptable-by-nature/</link>
+      <guid isPermaLink="true">https://hippodigital.co.uk/insights/product-management-mindsets-agile-adaptable-by-nature/</guid>
+      <pubDate>Sun, 01 Jun 2025 09:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>My Productivity System</title>
       <link>https://miketattersall.com/blogs/productivity.html</link>
       <guid isPermaLink="true">https://miketattersall.com/blogs/productivity.html</guid>
-      <pubDate>Wed, 28 Aug 2024 09:00:00 +0100</pubDate>
+      <pubDate>Wed, 28 Aug 2024 09:00:00 +0000</pubDate>
       <description>A simple flowchart-based productivity system for managing incoming tasks — actionable or not, delegate or do, immediate or scheduled.</description>
     </item>
     <item>
@@ -22,25 +59,55 @@
       <description>What service design is, what service designers do, and how service blueprints fit alongside user research and analytics.</description>
     </item>
     <item>
-      <title>My product management principles</title>
+      <title>My Product Management Principles</title>
       <link>https://miketattersall.com/blogs/my-product-management-principles.html</link>
       <guid isPermaLink="true">https://miketattersall.com/blogs/my-product-management-principles.html</guid>
       <pubDate>Sun, 12 Feb 2023 09:00:00 +0000</pubDate>
       <description>Seven principles that guide my approach to product management — from starting with why and designing for real people to measuring what matters.</description>
     </item>
     <item>
-      <title>Product management in government</title>
+      <title>Product Management In Government</title>
       <link>https://miketattersall.com/blogs/product-management-in-government.html</link>
       <guid isPermaLink="true">https://miketattersall.com/blogs/product-management-in-government.html</guid>
       <pubDate>Sun, 12 Feb 2023 09:00:00 +0000</pubDate>
       <description>Product management in government is shaped by users, policy, stakeholders and service context — not profit. The unique challenges and skills it demands.</description>
     </item>
     <item>
-      <title>Building effective teams to solve problems</title>
+      <title>Building Effective Teams to Solve Problems</title>
       <link>https://miketattersall.com/blogs/building-effective-teams-to-solve-problems.html</link>
       <guid isPermaLink="true">https://miketattersall.com/blogs/building-effective-teams-to-solve-problems.html</guid>
       <pubDate>Sun, 12 Feb 2023 09:00:00 +0000</pubDate>
       <description>Effective problem-solving teams start by understanding the problem, build around skills not job titles, and scale only when communication can hold up.</description>
+    </item>
+    <item>
+      <title>A positive approach to risk mitigation requires human-centred thinking</title>
+      <link>https://hippodigital.co.uk/insights/a-positive-approach-to-risk-mitigation-requires-human-centred-thinking/</link>
+      <guid isPermaLink="true">https://hippodigital.co.uk/insights/a-positive-approach-to-risk-mitigation-requires-human-centred-thinking/</guid>
+      <pubDate>Thu, 01 Sep 2022 09:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Building a single sign-on for government: What we've learnt so far</title>
+      <link>https://services.blog.gov.uk/2021/08/03/building-a-single-sign-on-for-government-what-weve-learnt-so-far/</link>
+      <guid isPermaLink="true">https://services.blog.gov.uk/2021/08/03/building-a-single-sign-on-for-government-what-weve-learnt-so-far/</guid>
+      <pubDate>Tue, 03 Aug 2021 09:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Business Subject Matter Experts – Get one (or two)</title>
+      <link>https://dwpdigital.blog.gov.uk/2015/06/04/business-subject-matter-experts-get-one-or-two/</link>
+      <guid isPermaLink="true">https://dwpdigital.blog.gov.uk/2015/06/04/business-subject-matter-experts-get-one-or-two/</guid>
+      <pubDate>Thu, 04 Jun 2015 09:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>For staff, with staff – Improving the digital back office</title>
+      <link>https://dwpdigital.blog.gov.uk/2014/10/27/for-staff-with-staff-improving-the-digital-back-office/</link>
+      <guid isPermaLink="true">https://dwpdigital.blog.gov.uk/2014/10/27/for-staff-with-staff-improving-the-digital-back-office/</guid>
+      <pubDate>Mon, 27 Oct 2014 09:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>User needs take the lead</title>
+      <link>https://dwpdigital.blog.gov.uk/2014/07/01/user-needs-take-the-lead/</link>
+      <guid isPermaLink="true">https://dwpdigital.blog.gov.uk/2014/07/01/user-needs-take-the-lead/</guid>
+      <pubDate>Tue, 01 Jul 2014 09:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
