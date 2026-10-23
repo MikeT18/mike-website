@@ -1,0 +1,163 @@
+{
+  "site": "https://miketattersall.com/",
+  "pages": [
+    {
+      "path": "",
+      "lastmod": "2026-10-23",
+      "changefreq": "weekly",
+      "priority": "1.0"
+    },
+    {
+      "path": "career-history.html",
+      "lastmod": "2026-10-23",
+      "changefreq": "monthly",
+      "priority": "0.7"
+    },
+    {
+      "path": "accessibility.html",
+      "lastmod": "2026-10-23",
+      "changefreq": "yearly",
+      "priority": "0.3"
+    }
+  ],
+  "posts": [
+    {
+      "title": "Ten Years of Delivery: The Next Ten of Change",
+      "url": "https://hippodigital.co.uk/ten-years-of-delivery-the-next-ten-of-change/",
+      "date": "2026-10",
+      "source": "Hippo Digital",
+      "type": "government",
+      "tags": "hippo government delivery leadership"
+    },
+    {
+      "title": "The Agreeable Machine: Why your AI tools are telling you what you want to hear",
+      "url": "https://www.linkedin.com/pulse/agreeable-machine-why-your-ai-tools-telling-you-what-want-tattersall-t8tgc",
+      "date": "2026-09",
+      "source": "LinkedIn",
+      "type": "ai",
+      "tags": "ai"
+    },
+    {
+      "title": "The potential and downsides of creating an AI-powered project brain",
+      "url": "https://hippodigital.co.uk/insights/the-potential-and-downsides-of-creating-an-ai-powered-project-brain/",
+      "date": "2026-08-20",
+      "source": "Hippo Digital",
+      "type": "ai",
+      "tags": "hippo ai project management"
+    },
+    {
+      "title": "What we learned building a government service with an AI agent",
+      "url": "https://hippodigital.co.uk/insights/what-we-learned-building-a-government-service-with-an-ai-agent/",
+      "date": "2026-08-04",
+      "source": "Hippo Digital",
+      "type": "ai",
+      "tags": "hippo ai government"
+    },
+    {
+      "title": "Most organisations aren't ready for AI",
+      "url": "https://hippodigital.co.uk/insights/most-organisations-arent-ready-for-ai/",
+      "date": "2026-03",
+      "source": "Hippo Digital",
+      "type": "ai",
+      "tags": "hippo ai"
+    },
+    {
+      "title": "Product Management Mindsets: Agile & adaptable by nature",
+      "url": "https://hippodigital.co.uk/insights/product-management-mindsets-agile-adaptable-by-nature/",
+      "date": "2025-06",
+      "source": "Hippo Digital",
+      "type": "product-management",
+      "tags": "hippo product-management agile"
+    },
+    {
+      "title": "My Productivity System",
+      "url": "blogs/productivity.html",
+      "date": "2024-08-28",
+      "source": "miketattersall.com",
+      "type": "productivity",
+      "tags": "productivity tools",
+      "summary": "A simple flowchart-based productivity system for managing incoming tasks — actionable or not, delegate or do, immediate or scheduled.",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "title": "Service Design",
+      "url": "blogs/service-design.html",
+      "date": "2023-02-12",
+      "source": "miketattersall.com",
+      "type": "service-design",
+      "tags": "service-design design",
+      "summary": "What service design is, what service designers do, and how service blueprints fit alongside user research and analytics.",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "title": "My Product Management Principles",
+      "url": "blogs/my-product-management-principles.html",
+      "date": "2023-02-12",
+      "source": "miketattersall.com",
+      "type": "product-management",
+      "tags": "product-management",
+      "summary": "Seven principles that guide my approach to product management — from starting with why and designing for real people to measuring what matters.",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "title": "Product Management In Government",
+      "url": "blogs/product-management-in-government.html",
+      "date": "2023-02-12",
+      "source": "miketattersall.com",
+      "type": "product-management",
+      "tags": "product-management government",
+      "summary": "Product management in government is shaped by users, policy, stakeholders and service context — not profit. The unique challenges and skills it demands.",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "title": "Building Effective Teams to Solve Problems",
+      "url": "blogs/building-effective-teams-to-solve-problems.html",
+      "date": "2023-02-12",
+      "source": "miketattersall.com",
+      "type": "leadership",
+      "tags": "teams leadership",
+      "summary": "Effective problem-solving teams start by understanding the problem, build around skills not job titles, and scale only when communication can hold up.",
+      "lastmod": "2026-10-23"
+    },
+    {
+      "title": "A positive approach to risk mitigation requires human-centred thinking",
+      "url": "https://hippodigital.co.uk/insights/a-positive-approach-to-risk-mitigation-requires-human-centred-thinking/",
+      "date": "2022-09",
+      "source": "Hippo Digital",
+      "type": "service-design",
+      "tags": "hippo risk human-centred"
+    },
+    {
+      "title": "Building a single sign-on for government: What we've learnt so far",
+      "url": "https://services.blog.gov.uk/2021/08/03/building-a-single-sign-on-for-government-what-weve-learnt-so-far/",
+      "date": "2021-08-03",
+      "source": "GDS / Services in Government",
+      "type": "government",
+      "tags": "gds government sso"
+    },
+    {
+      "title": "Business Subject Matter Experts – Get one (or two)",
+      "url": "https://dwpdigital.blog.gov.uk/2015/06/04/business-subject-matter-experts-get-one-or-two/",
+      "date": "2015-06-04",
+      "source": "DWP Digital",
+      "type": "government",
+      "tags": "dwp government"
+    },
+    {
+      "title": "For staff, with staff – Improving the digital back office",
+      "url": "https://dwpdigital.blog.gov.uk/2014/10/27/for-staff-with-staff-improving-the-digital-back-office/",
+      "date": "2014-10-27",
+      "source": "DWP Digital",
+      "type": "government",
+      "tags": "dwp government"
+    },
+    {
+      "title": "User needs take the lead",
+      "url": "https://dwpdigital.blog.gov.uk/2014/07/01/user-needs-take-the-lead/",
+      "date": "2014-07-01",
+      "source": "DWP Digital",
+      "type": "government",
+      "tags": "dwp government user-needs"
+    }
+  ]
+}

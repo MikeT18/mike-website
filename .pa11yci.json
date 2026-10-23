@@ -1,0 +1,29 @@
+{
+  "defaults": {
+    "standard": "WCAG2AA",
+    "runners": [
+      "axe",
+      "htmlcs"
+    ],
+    "wait": 1000,
+    "timeout": 30000,
+    "chromeLaunchConfig": {
+      "args": [
+        "--no-sandbox",
+        "--disable-setuid-sandbox"
+      ]
+    },
+    "levelCapWhenNeedsReview": "warning"
+  },
+  "urls": [
+    "http://localhost:8080/",
+    "http://localhost:8080/career-history.html",
+    "http://localhost:8080/accessibility.html",
+    "http://localhost:8080/404.html",
+    "http://localhost:8080/blogs/productivity.html",
+    "http://localhost:8080/blogs/service-design.html",
+    "http://localhost:8080/blogs/my-product-management-principles.html",
+    "http://localhost:8080/blogs/product-management-in-government.html",
+    "http://localhost:8080/blogs/building-effective-teams-to-solve-problems.html"
+  ]
+}
