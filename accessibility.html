@@ -2,14 +2,6 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYJ27X2YH6"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-ZYJ27X2YH6');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accessibility Statement | Mike Tattersall</title>
@@ -18,12 +10,16 @@
     <meta property="og:description" content="What this site does to be accessible, what still needs work, and how to report a problem.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://miketattersall.com/accessibility.html">
+    <link rel="canonical" href="https://miketattersall.com/accessibility.html">
     <meta property="og:image" content="https://miketattersall.com/images/mike.png">
     <meta name="twitter:card" content="summary">
     <link rel="alternate" type="application/rss+xml" title="Mike Tattersall — Blog" href="feed.xml">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -57,17 +53,18 @@
                 audience.</p>
 
             <h3>What I haven't done</h3>
-            <p>I've reviewed this manually and with AI-assisted tooling, not with a full professional audit or an
-                automated scanner like axe or Lighthouse, so there will be gaps I haven't found yet. Older content
-                (the career history page and the blog posts themselves) hasn't had the same scrutiny as the
-                homepage.</p>
+            <p>I've reviewed this manually and with AI-assisted tooling, not with a full professional audit. Every
+                change to the site is also checked automatically for WCAG AA failures with two scanners, axe and
+                HTML_CodeSniffer (via pa11y), alongside a broken-link check. Automated scanners only catch some
+                problems, so there will be gaps I haven't found yet. Older content (the career history page and
+                the blog posts themselves) hasn't had the same manual scrutiny as the homepage.</p>
 
             <h3>Reporting a problem</h3>
             <p>If something on this site doesn't work for you, <a href="mailto:michaelrwtattersall@gmail.com">email
                     me</a> and tell me what happened and what you were using (browser, screen reader, device). I'll
                 fix what I can.</p>
 
-            <p><em>Last reviewed: August 2026.</em></p>
+            <p><em>Last reviewed: October 2026.</em></p>
 
             <p><a href="index.html">&larr; Back to the homepage</a></p>
         </div>
