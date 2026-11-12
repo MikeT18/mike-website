@@ -339,9 +339,25 @@ p { margin: 0 0 1rem; max-width: 40rem; }
   .screen, .tile.is-flash { animation: none; }
   .tile, .btn { transition: none; }
 }
+
+/* Skip link for keyboard accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent);
+  color: var(--on-accent);
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 0;
+}
 </style>
 </head>
 <body>
+<a href="#app" class="skip-link">Skip to main content</a>
 <div id="app"></div>
 
 <script>
