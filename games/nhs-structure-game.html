@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Who runs the NHS? Structure game</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F8FAFC;
+  --surface: #FFFFFF;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+  --text: #0F172A;
+  --body: #334155;
+  --muted: #64748B;
+  --accent: #2563EB;
+  --accent-hover: #1D4ED8;
+  --accent-soft: #EFF6FF;
+  --on-accent: #FFFFFF;
+  --ok: #059669;
+  --ok-soft: #ECFDF5;
+  --bad: #DC2626;
+  --bad-soft: #FEF2F2;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F172A;
+    --surface: #1E293B;
+    --border: #334155;
+    --border-strong: #475569;
+    --text: #F8FAFC;
+    --body: #CBD5E1;
+    --muted: #94A3B8;
+    --accent: #60A5FA;
+    --accent-hover: #93C5FD;
+    --accent-soft: #172554;
+    --on-accent: #0F172A;
+    --ok: #34D399;
+    --ok-soft: #052E24;
+    --bad: #F87171;
+    --bad-soft: #450A0A;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0F172A;
+  --surface: #1E293B;
+  --border: #334155;
+  --border-strong: #475569;
+  --text: #F8FAFC;
+  --body: #CBD5E1;
+  --muted: #94A3B8;
+  --accent: #60A5FA;
+  --accent-hover: #93C5FD;
+  --accent-soft: #172554;
+  --on-accent: #0F172A;
+  --ok: #34D399;
+  --ok-soft: #052E24;
+  --bad: #F87171;
+  --bad-soft: #450A0A;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+:root {
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--body);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-underline-offset: 3px; }
+
+.wrap {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Top bar, styled like the site navigation */
+.site-bar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.site-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .75rem 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.wordmark {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: .95rem;
+  font-weight: 500;
+}
+.steps li { color: var(--muted); }
+.steps li.done { color: var(--body); }
+.steps li.current { color: var(--accent); }
+
+.screen {
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+  animation: fade .25s ease-out both;
+}
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+
+h2 {
+  font-size: clamp(1.5rem, 3.4vw, 1.875rem);
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+}
+h2:focus { outline: none; }
+h3 { margin: 0; }
+p { margin: 0 0 1rem; max-width: 40rem; }
+
+.hint { color: var(--muted); margin-bottom: 1.5rem; }
+.col-title {
+  font-size: .875rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: .75rem;
+}
+
+/* Cards, as used for the hero and panels on the site */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04);
+  max-width: 48rem;
+}
+.card p:last-of-type { margin-bottom: 0; }
+.credit-line { font-size: .9rem; color: var(--muted); margin-top: 1rem !important; }
+
+.pairs { display: grid; gap: 2rem; }
+@media (min-width: 40rem) {
+  .pairs { grid-template-columns: 1fr 1.2fr; gap: 2.5rem; align-items: start; }
+}
+
+.tiles { list-style: none; margin: 0; padding: 0; display: grid; gap: .6rem; }
+.tile {
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--body);
+  text-align: left;
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: .9rem 1.1rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04);
+  cursor: pointer;
+  transition: border-color .15s, background-color .15s, box-shadow .15s;
+}
+.tile.name { font-weight: 600; color: var(--text); }
+.tile:hover:not(:disabled) { border-color: var(--border-strong); }
+.tile[aria-pressed="true"] {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+.tile.is-done {
+  background: var(--ok-soft);
+  border-color: var(--ok);
+  color: var(--text);
+  cursor: default;
+}
+.tile.is-flash {
+  background: var(--bad-soft);
+  border-color: var(--bad);
+  animation: shake .36s;
+}
+@keyframes shake {
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+.tile:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Timeline: a vertical rule with dots, as the site uses for lists of steps */
+.timeline {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  border-left: 2px solid var(--border-strong);
+}
+.timeline li {
+  position: relative;
+  padding: 0 0 1rem 1.25rem;
+  color: var(--text);
+}
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: .5rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.timeline li.empty { color: var(--muted); }
+.timeline li.empty::before {
+  background: var(--surface);
+  box-shadow: inset 0 0 0 2px var(--border-strong);
+}
+.timeline .when { display: block; font-weight: 600; color: var(--accent); font-size: .9rem; }
+
+/* Callout, echoing the site's blue-edged highlight box */
+.note {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 12px;
+  background: linear-gradient(90deg, var(--accent-soft), var(--surface) 85%);
+}
+.note:empty {
+  margin-top: 1.5rem;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+.note.ok {
+  border-left-color: var(--ok);
+  background: linear-gradient(90deg, var(--ok-soft), var(--surface) 85%);
+}
+.note.bad {
+  border-left-color: var(--bad);
+  background: linear-gradient(90deg, var(--bad-soft), var(--surface) 85%);
+}
+.note p { margin: 0; }
+
+.actions { margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: .75rem; }
+.btn {
+  font: inherit;
+  font-weight: 600;
+  font-size: .975rem;
+  color: var(--on-accent);
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: .7rem 1.25rem;
+  cursor: pointer;
+  transition: background-color .15s, border-color .15s;
+}
+.btn:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+.btn.ghost {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+.btn.ghost:hover { background: var(--bg); border-color: var(--muted); }
+
+.statement {
+  font-size: clamp(1.35rem, 3vw, 1.7rem);
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  margin: 0 0 1.5rem;
+  max-width: 36rem;
+}
+
+.score {
+  font-size: clamp(3.5rem, 11vw, 5.5rem);
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin: 0 0 .75rem;
+}
+.score small {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--muted);
+  margin-left: .5rem;
+  letter-spacing: 0;
+}
+.band { color: var(--body); margin-bottom: 0; }
+
+.review { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.1rem; }
+.review li {
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+.review .rv-title { font-weight: 600; color: var(--text); margin-bottom: .3rem; }
+.review li p { margin-bottom: 0; }
+
+/* Footer credit, as the site's footer */
+.credit {
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--border);
+  font-size: .9rem;
+  color: var(--muted);
+}
+.credit-inner { padding-top: 1.25rem; padding-bottom: 3rem; }
+.credit p { margin: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .screen, .tile.is-flash { animation: none; }
+  .tile, .btn { transition: none; }
+}
+
+/* Skip link for keyboard accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent);
+  color: var(--on-accent);
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 0;
+}
+</style>
+</head>
+<body>
+<a href="#app" class="skip-link">Skip to main content</a>
+<div id="app"></div>
+
+<script>
+const BODIES = [
+  {
+    id: 'dhsc',
+    name: 'Department of Health and Social Care (DHSC)',
+    job: 'Sets health policy and decides how NHS funding is allocated.',
+    why: 'DHSC is the government department in charge of health and social care. With NHS England being wound up, it is taking on direct responsibility for running the NHS.'
+  },
+  {
+    id: 'icb',
+    name: 'Integrated Care Board (ICB)',
+    job: 'Decides which services its area needs and arranges for the NHS to deliver them.',
+    why: 'ICBs took over from Clinical Commissioning Groups in 2022 and operate within Integrated Care Systems. From April 2026, their number is being reduced through mergers.'
+  },
+  {
+    id: 'nice',
+    name: 'NICE',
+    job: 'Publishes guidance based on evidence and assesses whether treatments are worth funding.',
+    why: 'New medicines are assessed for their benefit, safety and value for money. Quality Adjusted Life Years (QALYs) are the measure used to weigh how much a treatment adds.'
+  },
+  {
+    id: 'cqc',
+    name: 'Care Quality Commission (CQC)',
+    job: 'Inspects services and gives each one a rating, from Outstanding down to Inadequate.',
+    why: 'The CQC checks hospitals, care homes, GP practices and dental surgeries for safety and quality. It has operated since 2009.'
+  },
+  {
+    id: 'pcn',
+    name: 'Primary Care Network (PCN)',
+    job: 'A group of GP practices that pool staff, serving roughly 30,000 to 50,000 people each.',
+    why: 'Networks began forming in 2019. Among the staff they share are clinical pharmacists, physiotherapists and social prescribers, who connect patients with community support.'
+  },
+  {
+    id: 'ukhsa',
+    name: 'UK Health Security Agency (UKHSA)',
+    job: 'Guards the public against health threats, including outbreaks of infection.',
+    why: 'Public Health England was broken up in 2021. Its health protection work went to UKHSA, while prevention work passed to OHID, which sits inside the DHSC.'
+  }
+];
+
+const EVENTS = [
+  {
+    id: 'e1',
+    when: '2012',
+    text: 'Clinical Commissioning Groups are created as local commissioning bodies by new legislation',
+    note: 'CCGs took on local commissioning until they were replaced in 2022.'
+  },
+  {
+    id: 'e2',
+    when: '2014',
+    text: 'Forty-two Sustainability and Transformation Partnerships are set up across England',
+    note: 'The Five Year Forward View pushed primary care and social care to work more closely together. These partnerships later became the 42 Integrated Care Systems.'
+  },
+  {
+    id: 'e3',
+    when: '2019',
+    text: 'The NHS Long Term Plan is published',
+    note: 'The plan confirmed the shift from partnerships to 42 Integrated Care Systems.'
+  },
+  {
+    id: 'e4',
+    when: '2022',
+    text: 'Integrated Care Boards replace Clinical Commissioning Groups under the Health and Care Act',
+    note: 'The changeover took effect on 1 July 2022. ICBs now sit within Integrated Care Systems.'
+  },
+  {
+    id: 'e5',
+    when: 'March 2025',
+    text: 'Ministers announce plans to abolish NHS England',
+    note: 'Its work is to be folded back into the Department of Health and Social Care.'
+  },
+  {
+    id: 'e6',
+    when: 'July 2025',
+    text: 'The 10-Year Health Plan for England is published',
+    note: 'It sets three priorities: more care close to home, moving from analogue to digital services, and preventing illness before it takes hold.'
+  }
+];
+
+const STATEMENTS = [
+  {
+    text: 'The NHS and NHS England are the same organisation.',
+    answer: false,
+    why: 'The NHS covers the whole publicly funded system. NHS England was a national body at arm’s length from ministers, and it is being wound up.'
+  },
+  {
+    text: 'NHS England is being abolished and merged into the Department of Health and Social Care.',
+    answer: true,
+    why: 'Announced in March 2025. The legislation is still going through Parliament, so check gov.uk for the latest position.'
+  },
+  {
+    text: 'Public Health England still operates as a separate body.',
+    answer: false,
+    why: 'It was closed in 2021, and its duties were divided between UKHSA and OHID.'
+  },
+  {
+    text: 'Scotland, Wales and Northern Ireland run their NHS in the same way as England.',
+    answer: false,
+    why: 'Health is devolved, so each nation runs its own health service with its own structure.'
+  },
+  {
+    text: 'There are 42 Integrated Care Systems in England.',
+    answer: true,
+    why: 'Boundaries follow population rather than land area: London has five, while Lincolnshire, which is larger, has one.'
+  },
+  {
+    text: 'The CQC rates services as Outstanding, Good, Requires Improvement or Inadequate.',
+    answer: true,
+    why: 'The public can use these ratings when choosing care, and providers are pushed to raise their standards.'
+  },
+  {
+    text: 'NHS Digital still runs as a separate body.',
+    answer: false,
+    why: 'NHS England absorbed it in February 2023, and its work is now being transferred to the DHSC.'
+  },
+  {
+    text: 'Integrated Care Boards replaced Clinical Commissioning Groups in 2022.',
+    answer: true,
+    why: 'The Health and Care Act 2022 made the change, with ICBs taking over from 1 July 2022.'
+  }
+];
+
+const TOTAL = BODIES.length + EVENTS.length + STATEMENTS.length;
+const app = document.getElementById('app');
+const game = { round: 0, score: 0, missed: [], r1: null, r2: null, r3: null };
+
+const byId = (list, id) => list.find(item => item.id === id);
+const shuffle = list => {
+  const a = list.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+};
+const esc = text => String(text).replace(/[&<>"']/g, c => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+}[c]));
+
+/* ---------- Game flow ---------- */
+
+function startGame() {
+  game.score = 0;
+  game.missed = [];
+  game.r1 = {
+    right: shuffle(BODIES.map(b => b.id)),
+    selected: null,
+    done: {},
+    wrong: {},
+    flash: null,
+    note: '',
+    tone: ''
+  };
+  game.round = 1;
+  render();
+}
+
+function startRound2() {
+  game.r2 = {
+    order: shuffle(EVENTS.map(e => e.id)),
+    placed: [],
+    stepWrong: 0,
+    flash: null,
+    note: '',
+    tone: ''
+  };
+  game.round = 2;
+  render();
+}
+
+function startRound3() {
+  game.r3 = { index: 0, answered: null };
+  game.round = 3;
+  render();
+}
+
+function advance() {
+  if (game.round === 1) startRound2();
+  else if (game.round === 2) startRound3();
+}
+
+/* ---------- Round 1: match bodies to jobs ---------- */
+
+function pickBody(id) {
+  const r = game.r1;
+  if (r.done[id]) return;
+  r.selected = id;
+  r.flash = null;
+  r.note = '';
+  r.tone = '';
+  render(`body-${id}`);
+}
+
+function pickJob(id) {
+  const r = game.r1;
+  r.flash = null;
+
+  if (!r.selected) {
+    r.note = 'Choose a body first.';
+    r.tone = '';
+    render(`job-${id}`);
+    return;
+  }
+
+  const body = byId(BODIES, r.selected);
+
+  if (id === body.id) {
+    r.done[body.id] = true;
+    if (r.wrong[body.id]) game.missed.push({ title: body.name, why: body.why });
+    else game.score++;
+    r.selected = null;
+    r.note = `Correct. ${body.why}`;
+    r.tone = 'ok';
+    const nextBody = BODIES.find(b => !r.done[b.id]);
+    render(nextBody ? `body-${nextBody.id}` : 'continue');
+  } else {
+    r.wrong[body.id] = (r.wrong[body.id] || 0) + 1;
+    r.flash = id;
+    r.note = `That is not what ${body.name} does. Try another description.`;
+    r.tone = 'bad';
+    render(`job-${id}`);
+  }
+}
+
+function screenRound1() {
+  const r = game.r1;
+  const matched = BODIES.filter(b => r.done[b.id]).length;
+
+  const bodies = BODIES.map(b => `
+    <li><button class="tile name${r.done[b.id] ? ' is-done' : ''}" type="button"
+      data-act="pick-body" data-id="${b.id}" data-key="body-${b.id}"
+      aria-pressed="${r.selected === b.id}" ${r.done[b.id] ? 'disabled' : ''}>${esc(b.name)}</button></li>`).join('');
+
+  const jobs = r.right.map(id => {
+    const b = byId(BODIES, id);
+    const cls = [
+      'tile',
+      r.done[id] ? 'is-done' : '',
+      r.flash === id ? 'is-flash' : ''
+    ].filter(Boolean).join(' ');
+    return `
+    <li><button class="${cls}" type="button"
+      data-act="pick-job" data-id="${id}" data-key="job-${id}" ${r.done[id] ? 'disabled' : ''}>${esc(b.job)}</button></li>`;
+  }).join('');
+
+  const hint = r.selected
+    ? `Now choose what ${esc(byId(BODIES, r.selected).name)} does.`
+    : 'Choose a body on the left, then the description that matches it.';
+
+  return `
+    <section>
+      <h2 data-key="title" tabindex="-1">Round 1: match each body to its job</h2>
+      <p class="hint">${hint}</p>
+      <div class="pairs">
+        <div>
+          <h3 class="col-title">Bodies</h3>
+          <ul class="tiles">${bodies}</ul>
+        </div>
+        <div>
+          <h3 class="col-title">What they do</h3>
+          <ul class="tiles">${jobs}</ul>
+        </div>
+      </div>
+      <div class="note ${r.tone}" aria-live="polite">${r.note ? `<p>${esc(r.note)}</p>` : ''}</div>
+      ${matched === BODIES.length
+        ? `<div class="actions"><button class="btn" type="button" data-act="next" data-key="continue">Continue to round 2</button></div>`
+        : ''}
+    </section>`;
+}
+
+/* ---------- Round 2: put milestones in order ---------- */
+
+function tapEvent(id) {
+  const r = game.r2;
+  const expected = EVENTS[r.placed.length];
+  r.flash = null;
+
+  if (id === expected.id) {
+    r.placed.push(id);
+    if (r.stepWrong) game.missed.push({ title: `${expected.when}: ${expected.text}`, why: expected.note });
+    else game.score++;
+    r.stepWrong = 0;
+    r.note = `${expected.when}. ${expected.note}`;
+    r.tone = 'ok';
+    const nextId = r.order.find(x => !r.placed.includes(x));
+    render(nextId ? `ev-${nextId}` : 'continue');
+  } else {
+    r.stepWrong++;
+    r.flash = id;
+    r.note = 'Not that one yet. Check which of the remaining events came first.';
+    r.tone = 'bad';
+    render(`ev-${id}`);
+  }
+}
+
+function screenRound2() {
+  const r = game.r2;
+  const remaining = r.order.filter(id => !r.placed.includes(id));
+
+  const placed = r.placed.map(id => {
+    const e = byId(EVENTS, id);
+    return `<li><span class="when">${esc(e.when)}</span>${esc(e.text)}</li>`;
+  }).join('');
+
+  const nextSlot = remaining.length
+    ? '<li class="empty">Tap the earliest remaining event on the right.</li>'
+    : '';
+
+  const tiles = remaining.map(id => {
+    const e = byId(EVENTS, id);
+    return `
+    <li><button class="tile${r.flash === id ? ' is-flash' : ''}" type="button"
+      data-act="tap-event" data-id="${id}" data-key="ev-${id}">${esc(e.text)}</button></li>`;
+  }).join('');
+
+  const hint = remaining.length
+    ? `Put the milestones in order, earliest first. ${remaining.length} to go.`
+    : 'All milestones are in place.';
+
+  return `
+    <section>
+      <h2 data-key="title" tabindex="-1">Round 2: put the milestones in order</h2>
+      <p class="hint">${hint}</p>
+      <div class="pairs">
+        <div>
+          <h3 class="col-title">Timeline</h3>
+          <ol class="timeline">${placed}${nextSlot}</ol>
+        </div>
+        <div>
+          <h3 class="col-title">Milestones</h3>
+          <ul class="tiles">${tiles}</ul>
+        </div>
+      </div>
+      <div class="note ${r.tone}" aria-live="polite">${r.note ? `<p>${esc(r.note)}</p>` : ''}</div>
+      ${remaining.length
+        ? ''
+        : `<div class="actions"><button class="btn" type="button" data-act="next" data-key="continue">Continue to round 3</button></div>`}
+    </section>`;
+}
+
+/* ---------- Round 3: true or false ---------- */
+
+function answer(choice) {
+  const r = game.r3;
+  if (r.answered) return;
+  const st = STATEMENTS[r.index];
+  const correct = choice === st.answer;
+  r.answered = { correct };
+  if (correct) game.score++;
+  else game.missed.push({ title: st.text, why: st.why });
+  render('next');
+}
+
+function nextQuestion() {
+  const r = game.r3;
+  if (r.index < STATEMENTS.length - 1) {
+    r.index++;
+    r.answered = null;
+    render();
+  } else {
+    game.round = 4;
+    render();
+  }
+}
+
+function screenRound3() {
+  const r = game.r3;
+  const st = STATEMENTS[r.index];
+
+  const reveal = r.answered
+    ? `<div class="note ${r.answered.correct ? 'ok' : 'bad'}" aria-live="polite">
+        <p><strong>${r.answered.correct ? 'Correct.' : 'Not quite.'}</strong>
+        The statement is ${st.answer ? 'true' : 'false'}. ${esc(st.why)}</p>
+       </div>`
+    : '';
+
+  const controls = r.answered
+    ? `<div class="actions"><button class="btn" type="button" data-act="next-q" data-key="next">${r.index < STATEMENTS.length - 1 ? 'Next statement' : 'See your score'}</button></div>`
+    : `<div class="actions">
+         <button class="btn" type="button" data-act="answer" data-id="true" data-key="ans-true">True</button>
+         <button class="btn ghost" type="button" data-act="answer" data-id="false" data-key="ans-false">False</button>
+       </div>`;
+
+  return `
+    <section>
+      <h2 data-key="title" tabindex="-1">Round 3: true or false?</h2>
+      <p class="hint">Statement ${r.index + 1} of ${STATEMENTS.length}</p>
+      <p class="statement">${esc(st.text)}</p>
+      ${controls}
+      ${reveal}
+    </section>`;
+}
+
+/* ---------- Intro, results and footer ---------- */
+
+function screenIntro() {
+  return `
+    <section class="card">
+      <h2 data-key="title" tabindex="-1">How well do you know the NHS in England?</h2>
+      <p>Three short rounds cover who does what, how the system has changed, and the points people most often mix up.</p>
+      <p>Each item you get right first time scores a point, out of ${TOTAL}.</p>
+      <p class="credit-line">Based on <a href="https://www.theukcatpeople.co.uk/post/structure-of-the-nhs-how-the-nhs-in-england-works-health-and-care-systems" target="_blank" rel="noopener">Structure of the NHS in 2026</a> by TheUKCATPeople.</p>
+      <div class="actions">
+        <button class="btn" type="button" data-act="start" data-key="start">Start round 1</button>
+      </div>
+    </section>`;
+}
+
+function screenResults() {
+  const s = game.score;
+  const band = s >= 18
+    ? 'You have the structure well in hand.'
+    : s >= 13
+      ? 'A solid base. The points below show where to focus.'
+      : 'A good first pass. Work through the explanations below, then play again.';
+
+  const review = game.missed.length
+    ? `<h3 class="col-title" style="margin-top:2.5rem">Worth revisiting</h3>
+       <ul class="review">
+         ${game.missed.map(m => `
+           <li>
+             <p class="rv-title">${esc(m.title)}</p>
+             <p>${esc(m.why)}</p>
+           </li>`).join('')}
+       </ul>`
+    : '<p style="margin-top:2rem">Every answer was right first time. Well done.</p>';
+
+  return `
+    <section>
+      <h2 data-key="title" tabindex="-1">Your score</h2>
+      <div class="card">
+        <p class="score">${s}<small>out of ${TOTAL}</small></p>
+        <p class="band">${band}</p>
+        <div class="actions">
+          <button class="btn" type="button" data-act="start" data-key="restart">Play again</button>
+        </div>
+      </div>
+      ${review}
+    </section>`;
+}
+
+function footer() {
+  return `<footer class="credit"><div class="wrap credit-inner">
+    <p>Adapted from <a href="https://www.theukcatpeople.co.uk/post/structure-of-the-nhs-how-the-nhs-in-england-works-health-and-care-systems" target="_blank" rel="noopener">Structure of the NHS in 2026</a> by TheUKCATPeople, updated 16 October 2026. The questions and wording here are new. The NHS reforms are still going through Parliament, so check gov.uk for the latest position.</p>
+  </div></footer>`;
+}
+
+/* ---------- Rendering and events ---------- */
+
+function header() {
+  const inRounds = game.round >= 1 && game.round <= 3;
+  const labels = ['Match bodies', 'Order milestones', 'True or false'];
+  const steps = inRounds
+    ? `<ol class="steps" aria-label="Rounds">${labels.map((label, i) => {
+        const n = i + 1;
+        const cls = n === game.round ? 'current' : n < game.round ? 'done' : '';
+        const current = n === game.round ? ' aria-current="step"' : '';
+        return `<li class="${cls}"${current}>${label}</li>`;
+      }).join('')}</ol>`
+    : '';
+  return `<header class="site-bar"><div class="wrap site-bar-inner"><h1 class="wordmark">Who runs the NHS?</h1>${steps}</div></header>`;
+}
+
+function render(focusKey = 'title') {
+  let body;
+  if (game.round === 0) body = screenIntro();
+  else if (game.round === 1) body = screenRound1();
+  else if (game.round === 2) body = screenRound2();
+  else if (game.round === 3) body = screenRound3();
+  else body = screenResults();
+
+  app.innerHTML = `${header()}<main class="wrap screen">${body}</main>${footer()}`;
+
+  if (focusKey) {
+    const el = app.querySelector(`[data-key="${focusKey}"]`);
+    if (el) el.focus();
+  }
+}
+
+app.addEventListener('click', event => {
+  const el = event.target.closest('[data-act]');
+  if (!el || el.disabled) return;
+  const { act, id } = el.dataset;
+
+  switch (act) {
+    case 'start': startGame(); break;
+    case 'pick-body': pickBody(id); break;
+    case 'pick-job': pickJob(id); break;
+    case 'tap-event': tapEvent(id); break;
+    case 'answer': answer(id === 'true'); break;
+    case 'next-q': nextQuestion(); break;
+    case 'next': advance(); break;
+  }
+});
+
+render('');
+</script>
+</body>
+</html>

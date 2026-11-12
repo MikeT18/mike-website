@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYJ27X2YH6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-ZYJ27X2YH6');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHS Structure Game | Mike Tattersall</title>
+    <meta name="description" content="An interactive quiz game testing your knowledge of how the NHS in England is structured. Match bodies to their roles, order key milestones, and answer true/false questions.">
+    <meta property="og:title" content="NHS Structure Game | Mike Tattersall">
+    <meta property="og:description" content="An interactive quiz game testing your knowledge of how the NHS in England is structured.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miketattersall.com/games/nhs-structure.html">
+    <meta property="og:image" content="https://miketattersall.com/images/mike.png">
+    <meta name="twitter:card" content="summary">
+    <link rel="alternate" type="application/rss+xml" title="Mike Tattersall — Blog" href="../feed.xml">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .game-container {
+            margin: 2rem 0;
+            display: flex;
+            justify-content: center;
+        }
+        .game-iframe {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--surface);
+            width: 100%;
+            max-width: 1200px;
+        }
+        @media (max-width: 640px) {
+            .game-iframe {
+                height: 800px;
+            }
+        }
+        @media (min-width: 641px) {
+            .game-iframe {
+                height: 1100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div id="header-placeholder"></div>
+
+    <main id="main-content">
+        <div class="blog-content">
+            <h2>NHS Structure Game</h2>
+            <p>Test your knowledge of how the NHS in England is structured. In three quick rounds, match key bodies to their roles, put major reforms in order, and answer true/false questions about the system. Each correct first-time answer scores a point.</p>
+
+            <div class="game-container">
+                <iframe
+                    class="game-iframe"
+                    src="nhs-structure-game.html"
+                    title="Who runs the NHS? Structure game"
+                    allow="fullscreen"
+                ></iframe>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../components.js"></script>
+</body>
+</html>
