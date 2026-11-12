@@ -350,37 +350,37 @@ const BODIES = [
     id: 'dhsc',
     name: 'Department of Health and Social Care (DHSC)',
     job: 'Sets health policy and decides how NHS funding is allocated.',
-    why: 'It is the central government department for health and social care. As NHS England is abolished, it is taking on more of the running of the NHS.'
+    why: 'DHSC is the government department in charge of health and social care. With NHS England being wound up, it is taking on direct responsibility for running the NHS.'
   },
   {
     id: 'icb',
     name: 'Integrated Care Board (ICB)',
-    job: 'Plans and commissions NHS services for its local population.',
-    why: 'ICBs replaced Clinical Commissioning Groups in 2022. They work within Integrated Care Systems, and from April 2026 they are being merged into fewer, larger bodies.'
+    job: 'Decides which services its area needs and arranges for the NHS to deliver them.',
+    why: 'ICBs took over from Clinical Commissioning Groups in 2022 and operate within Integrated Care Systems. From April 2026, their number is being reduced through mergers.'
   },
   {
     id: 'nice',
     name: 'NICE',
-    job: 'Produces evidence-based guidance and judges whether treatments offer good value.',
-    why: 'NICE reviews new drugs for efficacy, safety and cost-effectiveness. It uses Quality Adjusted Life Years (QALYs) to measure what a treatment adds.'
+    job: 'Publishes guidance based on evidence and assesses whether treatments are worth funding.',
+    why: 'New medicines are assessed for their benefit, safety and value for money. Quality Adjusted Life Years (QALYs) are the measure used to weigh how much a treatment adds.'
   },
   {
     id: 'cqc',
     name: 'Care Quality Commission (CQC)',
-    job: 'Inspects services independently and rates them Outstanding, Good, Requires Improvement or Inadequate.',
-    why: 'The CQC regulates quality and safety across hospitals, GP practices, care homes and dental surgeries. It was established in April 2009.'
+    job: 'Inspects services and gives each one a rating, from Outstanding down to Inadequate.',
+    why: 'The CQC checks hospitals, care homes, GP practices and dental surgeries for safety and quality. It has operated since 2009.'
   },
   {
     id: 'pcn',
     name: 'Primary Care Network (PCN)',
-    job: 'A group of GP practices that share staff, usually covering 30,000 to 50,000 patients.',
-    why: 'PCNs were introduced in 2019. Shared staff include clinical pharmacists, physiotherapists and social prescribers.'
+    job: 'A group of GP practices that pool staff, serving roughly 30,000 to 50,000 people each.',
+    why: 'Networks began forming in 2019. Among the staff they share are clinical pharmacists, physiotherapists and social prescribers, who connect patients with community support.'
   },
   {
     id: 'ukhsa',
     name: 'UK Health Security Agency (UKHSA)',
-    job: 'Protects the public from health threats such as infectious disease outbreaks.',
-    why: 'UKHSA took on health protection when Public Health England was abolished in 2021. Prevention work sits with the Office for Health Improvement and Disparities (OHID), inside the DHSC.'
+    job: 'Guards the public against health threats, including outbreaks of infection.',
+    why: 'Public Health England was broken up in 2021. Its health protection work went to UKHSA, while prevention work passed to OHID, which sits inside the DHSC.'
   }
 ];
 
@@ -388,38 +388,38 @@ const EVENTS = [
   {
     id: 'e1',
     when: '2012',
-    text: 'The Health and Social Care Act introduces Clinical Commissioning Groups',
+    text: 'Clinical Commissioning Groups are created as local commissioning bodies by new legislation',
     note: 'CCGs took on local commissioning until they were replaced in 2022.'
   },
   {
     id: 'e2',
     when: '2014',
-    text: 'The 42 Sustainability and Transformation Partnerships are established',
-    note: 'The Five Year Forward View called for closer working between primary care and social care. These partnerships later became the 42 Integrated Care Systems.'
+    text: 'Forty-two Sustainability and Transformation Partnerships are set up across England',
+    note: 'The Five Year Forward View pushed primary care and social care to work more closely together. These partnerships later became the 42 Integrated Care Systems.'
   },
   {
     id: 'e3',
     when: '2019',
     text: 'The NHS Long Term Plan is published',
-    note: 'The plan formalised the move from partnerships to 42 Integrated Care Systems.'
+    note: 'The plan confirmed the shift from partnerships to 42 Integrated Care Systems.'
   },
   {
     id: 'e4',
     when: '2022',
-    text: 'The Health and Care Act replaces Clinical Commissioning Groups with Integrated Care Boards',
-    note: 'ICBs took over commissioning from 1 July 2022 and work within Integrated Care Systems.'
+    text: 'Integrated Care Boards replace Clinical Commissioning Groups under the Health and Care Act',
+    note: 'The changeover took effect on 1 July 2022. ICBs now sit within Integrated Care Systems.'
   },
   {
     id: 'e5',
     when: 'March 2025',
-    text: 'The government announces that NHS England will be abolished',
-    note: 'Its functions are to be merged into the Department of Health and Social Care.'
+    text: 'Ministers announce plans to abolish NHS England',
+    note: 'Its work is to be folded back into the Department of Health and Social Care.'
   },
   {
     id: 'e6',
     when: 'July 2025',
     text: 'The 10-Year Health Plan for England is published',
-    note: 'It is built around three shifts: hospital to community, analogue to digital, and sickness to prevention.'
+    note: 'It sets three priorities: more care close to home, moving from analogue to digital services, and preventing illness before it takes hold.'
   }
 ];
 
@@ -427,17 +427,17 @@ const STATEMENTS = [
   {
     text: 'The NHS and NHS England are the same organisation.',
     answer: false,
-    why: 'The NHS is the whole publicly funded system. NHS England was one national arms-length body, and it is being abolished.'
+    why: 'The NHS covers the whole publicly funded system. NHS England was a national body at arm’s length from ministers, and it is being wound up.'
   },
   {
     text: 'NHS England is being abolished and merged into the Department of Health and Social Care.',
     answer: true,
-    why: 'This was announced in March 2025. The legislation is still going through Parliament, so check gov.uk for the latest position.'
+    why: 'Announced in March 2025. The legislation is still going through Parliament, so check gov.uk for the latest position.'
   },
   {
     text: 'Public Health England still operates as a separate body.',
     answer: false,
-    why: 'It was abolished in 2021. Its work passed to the UK Health Security Agency and the Office for Health Improvement and Disparities.'
+    why: 'It was closed in 2021, and its duties were divided between UKHSA and OHID.'
   },
   {
     text: 'Scotland, Wales and Northern Ireland run their NHS in the same way as England.',
@@ -447,17 +447,17 @@ const STATEMENTS = [
   {
     text: 'There are 42 Integrated Care Systems in England.',
     answer: true,
-    why: 'Their size varies with population. London is covered by five, while Lincolnshire has just one.'
+    why: 'Boundaries follow population rather than land area: London has five, while Lincolnshire, which is larger, has one.'
   },
   {
     text: 'The CQC rates services as Outstanding, Good, Requires Improvement or Inadequate.',
     answer: true,
-    why: 'These ratings help the public choose services, and they encourage providers to improve.'
+    why: 'The public can use these ratings when choosing care, and providers are pushed to raise their standards.'
   },
   {
     text: 'NHS Digital still runs as a separate body.',
     answer: false,
-    why: 'It merged into NHS England in February 2023, and its functions are now moving into the DHSC.'
+    why: 'NHS England absorbed it in February 2023, and its work is now being transferred to the DHSC.'
   },
   {
     text: 'Integrated Care Boards replaced Clinical Commissioning Groups in 2022.',
